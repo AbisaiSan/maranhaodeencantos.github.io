@@ -1,0 +1,404 @@
+/*CONFIGURAÇÕES GERAIS*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-size: 100%;
+    border: none;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+  }
+
+:root{
+    --cor-bg:#F5F7F7;
+    --cor-white:#FFFFFF;
+    --cor-secundaria:#C0513E;
+    --cor-principal:#3E528D;
+    --cor-cinza:#C4C4C4;
+    --cor-preto:#121212;
+}
+body{
+    background-color: #F5F7F7;
+}
+
+nav, ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    
+  }
+
+/*INICIO DOS ESTILOS DOS DOCUMETOS*/
+
+header {
+    background-color: var(--cor-white);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+   
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+    width: 208.23px;
+    height: 66px;
+    left: 40px;
+}
+.idioma-br{
+    width: 28.83px;
+    height: 29px;
+}
+.pesquisa{
+    width: 28.83px;
+    height: 29px;
+}
+.favoritos{
+    width: 28.83px;
+    height: 29px;
+}
+
+.favoritos:hover{
+    color:var(--cor-secundaria)
+}
+header li a{
+  color: var(--color-principal);
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+}
+header li a:hover{
+  border-bottom: 2px solid var(--cor-secundaria);
+}
+header li {
+  margin: 0 15px;
+}
+header li:first-child{
+  margin-left: 0;
+}
+header li:last-child{
+  margin-right: 0;
+}
+@media (max-width:700px){
+  header{
+   flex-direction: column;
+  }
+  .logo {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  header li a{
+      font-size: 1.1rem;
+
+  }
+}
+
+/*SLIDES*/
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.mySlides img{
+  width: 100%;
+  height:686px!important ;
+}
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  height: 686px!important;
+  margin-top: 95px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+li {
+  list-style: none;
+}
+
+.titulo-all {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  color: var(--cor-principal);
+  padding: 25px 0 0 0;
+}
+.curiosidade-ma {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+  width: 100%;
+  height: 398px;
+  background-color: var(--cor-white);
+}
+
+.icones-curiosidades {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.icones-curiosidades a {
+  margin: 0 35px;
+  text-decoration: none;
+  font-size: 15px;
+  color:#0e2431;
+  font-weight: 500;
+}
+
+/*SLIDES O QUE VOCÊ PROCURA*/
+.bg-slides{
+  
+  width: 100%;
+  height: 537px;
+  background-color: var(--cor-principal);
+}
+.galeria-roteiros {
+  display: flex;
+  width: 100%;
+  height: 686px !important;
+  position: relative;
+  margin-top: 95px;
+}
+
+/*SLIDES*/
+.roteiros {display: none;}
+img {vertical-align: middle;}
+
+.roteiros img{
+  width: 200px;
+  height: 340px;
+}
+/* Slideshow container */
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/*MARANHÃO ESTÁ NA MODA*/
+
+.bg-maranhao-moda {
+  margin-top: 2%;
+  width: 100%;
+  height: 700px;
+  background-color: var(--cor-white);
+}
+
+.cards-maranhao-moda{
+  
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  margin: 40px;
+}
+
+#card {
+  width: 314px;
+  height: 480px;
+  background-color: var(--cor-white);
+  border-radius: 5px;
+  margin:0 40px;
+  box-shadow: 0px 5px 5px rgba(187, 203, 217, 0.25), 10px 0px 10px rgba(187, 203, 217, 0.2);
+}
+
+.img-maranhao-moda img {
+  width: 314px;
+  height: 218.18px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.titulo-card-maranhao-moda h2{
+  text-align: left;
+  padding: 15px 5% 15px 5%;
+  margin-top: 2%;
+  font-size: 1.2rem;
+  color: var(--cor-preto);
+}
+
+.texto-card-maranhao-moda p {
+  padding: 0px 5% 10px 5%;
+  text-align: left  ;
+  margin-top: 2%;
+  font-size: 1rem;
+  color: var(--cor-cinza);
+}
+
+.botao-saiba-mara-moda {
+  cursor: pointer;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 105.28px;
+  height: 39.67px;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-white);
+  border:none;
+  border-radius: 5px;
+}
+.botao-veja-mara-moda {
+  cursor: pointer;
+  width: 105.28px;
+  height: 39.67px;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-white);
+  border:none;
+  border-radius: 5px;
+} 
+
+/*CALENDÁRIO*/
+
+.bg-calendario{
+  margin-top: 2%;
+  width: 100%;
+  height: 430px;
+  background-color: var(--cor-white);
+}
+
+.calendario{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:400px;
+}
+
+.imagem-calendario img{
+  cursor: pointer;
+  width: 450px;
+  height: 250px;
+}
+
+.icone-calendario img{
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+}
+
+/*INSTAGRAM*/
+
+.bg-instagram{
+  margin-top: 2%;
+  width: 100%;
+  height: 430px;
+  background-color: var(--cor-white);
+}
+
+.instagram{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:40px;
+}
+
+.card-instagram img{
+  width: 250px;
+  height: 224.62px; 
+  cursor: pointer;
+}
+
+.botao-instagram {
+  cursor: pointer;
+  margin-top: 3%;
+  width: 150px;
+  height: 39.67px;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-white);
+  border:none;
+  border-radius: 5px;
+}
+
+/*DICAS DE UM TURISTA*/
+
+.dicas-de-turista {
+  margin-top: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.icone img {
+  width: 70px;
+  height: 80px;
+}
+.textos-dicas-turistas p {
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--cor-principal);
+}
+.textos-dicas-turistas span {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: var(--cor-secundaria);
+}
+
+footer   {
+  margin-top: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.dados-footer li a i {
+  display: flex;
+  flex-direction: column;
+}
+.redes-sociais li a i {
+  display: flex;
+  flex-direction: column;
+}
