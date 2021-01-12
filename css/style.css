@@ -18,11 +18,15 @@
     --cor-principal:#3E528D;
     --cor-cinza:#C4C4C4;
     --cor-preto:#121212;
+    --cor-letra-menu:#6E6E6E;
 }
 body{
     background-color: #F5F7F7;
+    font-family: 'Roboto Slab', serif;
 }
-
+li {
+  list-style: none;
+}
 nav, ul {
     list-style: none;
   }
@@ -32,234 +36,272 @@ nav, ul {
     
   }
 
-/*INICIO DOS ESTILOS DOS DOCUMETOS*/
 
-header {
-    background-color: var(--cor-white);
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 30px;
-   
-}
-header nav {
+/*HEADER TESTE*/
+
+nav {
   display: flex;
+  /*Jogar os itens para o canto da página*/
+  justify-content: space-around;
+  align-items: center;
+  /*Mudando a cor de fundo do menu*/
+  background-color: var(--cor-white);
+  /*Fonte do menu*/
+  margin: 0 auto;
+  padding:  15px 0;
+}
+
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.logo {
-    width: 208.23px;
-    height: 66px;
-    left: 40px;
-}
-.idioma-br{
-    width: 28.83px;
-    height: 29px;
-}
-.pesquisa{
-    width: 28.83px;
-    height: 29px;
-}
-.favoritos{
-    width: 28.83px;
-    height: 29px;
-}
 
-.favoritos:hover{
-    color:var(--cor-secundaria)
-}
-header li a{
-  color: var(--color-principal);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
-  letter-spacing: 0.1rem;
-  font-weight: 500;
-}
-header li a:hover{
-  border-bottom: 2px solid var(--cor-secundaria);
-}
-header li {
-  margin: 0 15px;
-}
-header li:first-child{
-  margin-left: 0;
-}
-header li:last-child{
-  margin-right: 0;
-}
-@media (max-width:700px){
-  header{
-   flex-direction: column;
-  }
-  .logo {
-    margin-right: 0;
-    margin-bottom: 15px;
-  }
-  header li a{
-      font-size: 1.1rem;
-
-  }
-}
-
-/*SLIDES*/
-.mySlides {display: none;}
-img {vertical-align: middle;}
-
-.mySlides img{
-  width: 100%;
-  height:686px!important ;
-}
-/* Slideshow container */
-.slideshow-container {
-  width: 100%;
-  height: 686px!important;
-  margin-top: 95px;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 10px;
-  width: 10px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-
-li {
+.nav-links li {
+  /*Sumindo com os pontos que ficavam nos itens*/
   list-style: none;
+
+
 }
+
+.nav-links a {
+  /*Mudando a cor dos itens*/
+  color: var(--cor-letra-menu);
+  font-size: 1.1em;
+  display: block;
+  padding: 10px ;
+  text-align: center; 
+}
+
+.burger {
+  /*Não deixando o menu hambuguer visivel */
+  display: none;
+  /*aparecendo a maozinha quando clica no menu hambuguer*/
+  cursor: pointer;
+}
+
+.burger div {
+  /*Ajeitando o menu Hambuguer*/
+  width: 25px;
+  height: 3px;
+  background-color:var(--cor-preto);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/*Ajustando a altura*/
+@media screen and (max-width:1024px) {
+  .nav-links {
+    display: flex;
+    /*Jogar os itens para o canto da página*/
+    justify-content: space-around;
+    align-items: center;
+    /*Mudando a cor de fundo do menu*/
+    background-color: var(--cor-white);
+    /*Fonte do menu*/
+    margin: 0 auto;
+    padding:  15px 0;
+  }
+  .nav-links a {
+    /*Mudando a cor dos itens*/
+    color: var(--cor-letra-menu);
+    font-size: 1.1em;
+    display: block;
+    padding: 7px ;
+    text-align: center; 
+  }
+}
+
+/*Ajustando a altura minima*/
+@media screen and (max-width:768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links a{
+    text-align: left;
+    padding-bottom: 20%;
+    font-size: 1.2em;
+
+  }
+  /*ajustando os itens para se adequar a altura min.*/
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    top: 8vh;
+    /*Arrumando o menu hambuguer*/
+    background-color: var(--cor-preto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    /*Ajeitando a transição parar abrir o menu hambuguer*/
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    /*para aparecer o menu hambuguer quando a tela tiver pequena*/
+    display: block;
+  }
+}
+
+/*Quando se clica no menu hambuguer, consegue abrir os itens*/
+.nav-active {
+  transform: translateX(0%);
+}
+
+/*Animações quando se clica no menu hamburguer*/
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/*Transformando o menu em X*/
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+@media screen and (max-width: 768px) {
+  .nav-links.nav-active li {
+    opacity: 1;
+  }
+}
+/*INICIO DOS ESTILOS DOS DOCUMETOS*/
+
+/*CURIOSIDADE MARANHÃO*/
+
+.bg-curiosidades-ma{
+  margin-top: 3%;
+  padding: 60px 10px;
+  background-color: var(--cor-white);
+}
+
+.curiosidade-ma {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding:  15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .titulo-all {
   text-align: center;
   font-size: 1.5rem;
   line-height: 4rem;
   color: var(--cor-principal);
-  padding: 25px 0 0 0;
-}
-.curiosidade-ma {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2%;
-  width: 100%;
-  height: 398px;
-  background-color: var(--cor-white);
+  
 }
 
 .icones-curiosidades {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
 }
 .icones-curiosidades a {
-  margin: 0 35px;
+  margin: 0 15px;
   text-decoration: none;
-  font-size: 15px;
   color:#0e2431;
   font-weight: 500;
 }
-
-/*SLIDES O QUE VOCÊ PROCURA*/
-.bg-slides{
+.icone-curiosidade img {
+  width: 100px;
+  height: 100px;
+}
+/*RESPONSIVO CURIOSIDADES*/
+@media  (max-width: 768px) {
+  .bg-curiosidades-ma{
+    padding: 20px 5px;
+  }
+  .curiosidade-ma {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .icone-curiosidade img{
+    width: 60px;
+    height: 60px;
+  }
+  .titulo-all {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1rem;
+    color: var(--cor-principal);
+    
+  }
   
-  width: 100%;
-  height: 537px;
-  background-color: var(--cor-principal);
-}
-.galeria-roteiros {
-  display: flex;
-  width: 100%;
-  height: 686px !important;
-  position: relative;
-  margin-top: 95px;
-}
-
-/*SLIDES*/
-.roteiros {display: none;}
-img {vertical-align: middle;}
-
-.roteiros img{
-  width: 200px;
-  height: 340px;
-}
-/* Slideshow container */
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+  .icones-curiosidades {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+  }
+  .icones-curiosidades a {
+    margin: 0 2px;
+    text-decoration: none;
+    font-size: 15px;
+    color:#0e2431;
+    font-weight: 500;
+  }
 }
 
 /*MARANHÃO ESTÁ NA MODA*/
 
 .bg-maranhao-moda {
-  margin-top: 2%;
-  width: 100%;
-  height: 700px;
+  margin-top: 3%;
+  padding: 60px 10px;
   background-color: var(--cor-white);
 }
 
 .cards-maranhao-moda{
-  
+  max-width: 1300px;
+  margin: 0 auto;
+  padding:  15px 0;
   display: flex;
-  justify-content:center;
-  align-items:center;
-  margin: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 #card {
-  width: 314px;
+  width: 250px;
   height: 480px;
   background-color: var(--cor-white);
   border-radius: 5px;
-  margin:0 40px;
+  margin:0 20px;
   box-shadow: 0px 5px 5px rgba(187, 203, 217, 0.25), 10px 0px 10px rgba(187, 203, 217, 0.2);
 }
 
 .img-maranhao-moda img {
-  width: 314px;
-  height: 218.18px;
+  width: 250px;
+  height: 220px;
   border-radius: 5px 5px 0px 0px;
 }
 
@@ -283,14 +325,15 @@ img {vertical-align: middle;}
   cursor: pointer;
   margin-top: 5%;
   margin-left: 5%;
-  width: 105.28px;
-  height: 39.67px;
+  width: 105px;
+  height: 39px;
   background-color: var(--cor-secundaria);
   color: var(--cor-white);
   border:none;
   border-radius: 5px;
 }
 .botao-veja-mara-moda {
+  margin-top: 2%;
   cursor: pointer;
   width: 105.28px;
   height: 39.67px;
@@ -300,26 +343,45 @@ img {vertical-align: middle;}
   border-radius: 5px;
 } 
 
+@media  (max-width: 768px) {
+  
+  .bg-maranhao-moda{
+    padding: 20px 10px;
+  }
+  .cards-maranhao-moda{
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  #card {
+    margin-top: 5%;
+  }
+  .botao-veja-mara-moda {
+    margin-top: 4%;
+  }
+}
+
 /*CALENDÁRIO*/
 
 .bg-calendario{
-  margin-top: 2%;
-  width: 100%;
-  height: 430px;
+  margin-top: 3%;
+  padding: 60px 10px;
   background-color: var(--cor-white);
 }
 
 .calendario{
+  max-width: 1300px;
+  margin: 0 auto;
+  padding:  15px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:400px;
 }
 
 .imagem-calendario img{
   cursor: pointer;
   width: 450px;
   height: 250px;
+  margin: 0 40px;
 }
 
 .icone-calendario img{
@@ -328,26 +390,50 @@ img {vertical-align: middle;}
   height: 150px;
 }
 
+@media  (max-width: 768px) {
+  
+  .bg-calendario{
+    padding: 20px 10px;
+  }
+  .calendario{
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  .imagem-calendario img{
+    cursor: pointer;
+    width: 350px;
+    height: 300px;
+    margin: 0 40px;
+  }
+  .botao-veja-mara-moda {
+    margin-top: 4%;
+  }
+}
+
 /*INSTAGRAM*/
 
 .bg-instagram{
-  margin-top: 2%;
-  width: 100%;
-  height: 430px;
+  margin-top: 3%;
+  padding: 60px 10px;
   background-color: var(--cor-white);
 }
 
 .instagram{
+  max-width: 1300px;
+  margin: 0 auto;
+  padding:  15px 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap:40px;
 }
 
 .card-instagram img{
+  
   width: 250px;
   height: 224.62px; 
   cursor: pointer;
+  margin: 0 20px;
 }
 
 .botao-instagram {
@@ -361,44 +447,157 @@ img {vertical-align: middle;}
   border-radius: 5px;
 }
 
+@media  (max-width: 768px) {
+  
+  .bg-instagram{
+    padding: 20px 10px;
+  }
+  .card-instagram{
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  
+  .botao-instagram {
+    margin-top: 4%;
+    margin-bottom: 2%;
+  }
+}
 /*DICAS DE UM TURISTA*/
 
-.dicas-de-turista {
+.bg-dicas-turista{
   margin-top: 4%;
+  padding: 60px 10px;
+  background-color: var(--cor-white);
+}
+.container {
+  
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
-.icone img {
-  width: 70px;
-  height: 80px;
-}
-.textos-dicas-turistas p {
-  text-align: left;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  color: var(--cor-principal);
-}
-.textos-dicas-turistas span {
-  text-align: center;
-  font-size: 1.2rem;
-  line-height: 2rem;
-  color: var(--cor-secundaria);
+.quote_clientes {
+	padding: 60px 0;
+	max-width: 460px;
+	margin: 0 auto;
 }
 
-footer   {
-  margin-top: 4%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.quote_clientes p{
+	text-align: center;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 18px;
+	line-height: 25px;
+	font-style: italic;
+	margin-bottom: 20px;
 }
-.dados-footer li a i {
-  display: flex;
-  flex-direction: column;
+
+.quote_clientes cite {
+	font-size: 18px;
+	font-weight: bold;
+	float: right;
+	font-style: normal;
 }
-.redes-sociais li a i {
-  display: flex;
-  flex-direction: column;
+
+[data-slide]{position:relative}[data-slide]>*{position:absolute;top:0;opacity:0;pointer-events:none}[data-slide]>.active{position:relative;opacity:1;transition:opacity .5s;z-index:1;pointer-events:auto}
+
+/*FOOTER*/
+
+.footer{
+    padding: 60px 10px;
+    margin-top: 4%;
+    background-color: var(--cor-white);
+}
+
+.footer-info{  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:stretch;
+}
+
+.redes h2 {
+  color: var(--cor-letra-menu);
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+.rede-icone{
+ margin-top: 2%;
+}
+.rede-icone i:hover{
+  color: var(--cor-principal);
+}
+.rede-icone i{
+  color: var(--cor-cinza);
+  text-align: left;
+  padding: 0px 5px;   
+  font-size: 30px;
+
+}
+.contato{
+  max-width: 330px;
+}
+.contato h2{
+  color: var(--cor-letra-menu);
+  font-size: 1.2em;
+  line-height: 1.3em;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.contato li{
+  color: var(--cor-cinza);
+  font-size: 1em;
+  line-height: 1.2em;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.maranhao-encantos{
+  max-width: 330px;
+}
+
+.maranhao-encantos h2{
+  color: var(--cor-letra-menu);
+  font-size: 1.2em;
+  line-height: 1.3em;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.maranhao-encantos li{
+  cursor: pointer;
+  color: var(--cor-cinza);
+  font-size: 1em;
+  line-height: 1.2em;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+@media  (max-width: 768px) {
+  
+  .footer-info{  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+.redes h2, .contato h2, .maranhao-encantos h2{
+  padding: 10px 0;
+}
+ .contato{
+  max-width: 250px;
+  margin: 5% 0;
+}
+
+.contato li{
+  color: var(--cor-cinza);
+  font-size: 1em;
+  line-height: 1.2em;
+  letter-spacing: 1px;
+  text-align: justify;
+}
+
+.maranhao-encantos li{
+  text-align: justify;
+  max-width: 250px;
+}
 }
