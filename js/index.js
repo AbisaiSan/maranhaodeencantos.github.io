@@ -27,3 +27,9 @@ const navSlide = () => {
 }
 
 navSlide();
+
+
+let paragrafo = document.querySelector('#paragrafo');
+paragrafo.addEventListener('click', (ev) => {
+  paragrafo.setAttribute('data-conteudo', 'Novo texto');
+});
