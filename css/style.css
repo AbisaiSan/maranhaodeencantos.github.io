@@ -571,6 +571,9 @@ nav {
   text-align: left;
 }
 
+.logo-footer{
+  width: 100%;
+}
 @media  (max-width: 768px) {
   
   .footer-info{  
@@ -600,4 +603,117 @@ nav {
   text-align: justify;
   max-width: 250px;
 }
+}
+
+/*PAGINA CONHEÇA O MARANHÃO*/
+.bg-sobre{
+  margin-top: 3%;
+  padding: 60px 10px;
+  background-color: var(--cor-white);
+}
+
+.borda-titulo h2{
+   border-bottom: 2px solid #C0513E; 
+   width: 59px;
+   height: 5px;
+}
+
+.texto-sobre{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding:  15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto-sobre p {
+  font-size: 1.2em;
+  line-height: 1.4em;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: var(--cor-cinza);
+  padding-bottom: 10px;
+}
+
+@media  (max-width: 768px) {
+  .texto-sobre p {
+    font-size: 0.9em;
+    line-height: 1.2em;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: var(--cor-cinza);
+    padding-bottom: 10px;
+  }
+}
+
+/*PÁGINA INFORMAÇÕES ÚTEIS*/
+
+.bg-info-uteis{
+  padding: 60px 10px;
+  margin-top: 4%;
+  background-color: var(--cor-white);
+}
+
+.cards-info{  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items:stretch;
+}
+.borda{
+  border-bottom: 1px solid #121212;
+}
+.card-info {
+  padding: 20px 0px;
+  max-width: 1450px;
+  display: flex; 
+  justify-content: space-between; 
+  align-items:stretch;
+} 
+.textos-info{
+  display: flex; 
+  padding: 0 20px;
+}
+.textos-info span{
+  max-width: 450px;
+  color: var(--cor-cinza);
+  font-size: 1em;
+  line-height: 1.2em;
+  display: flex; 
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+.img-info img{
+  padding: 15px 0;
+  width: 300;
+  height: 200;
+}
+@media  (max-width: 768px) {
+  .bg-info-uteis{
+    padding: 30px 10px;
+   
+  }
+  .cards-info{  
+    flex-direction: column;
+  } 
+  .card-info {
+    flex-direction: column;
+  }
+  .img-info img{
+    padding: 15px 0;
+    width: 300px;
+    height: 200px;
+  }
+  .textos-info{
+    display: flex; 
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
+  .textos-info span{
+    display: flex; 
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
 }
