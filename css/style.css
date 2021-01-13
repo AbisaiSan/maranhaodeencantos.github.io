@@ -27,10 +27,13 @@ nav {
   /*Mudando a cor de fundo do menu*/
   background-color: var(--cor-white);
   /*Fonte do menu*/
-  margin: 0 auto;
   padding:  15px 0;
+ 
 }
 
+.menu-logo img{
+  margin-top: 5%;
+}
 
 .nav-links {
   display: flex;
@@ -437,7 +440,6 @@ nav {
 }
 
 .card-instagram img{
-  
   width: 250px;
   height: 224.62px; 
   cursor: pointer;
@@ -460,11 +462,25 @@ nav {
   .bg-instagram{
     padding: 20px 10px;
   }
+  .instagram{
+   
+    margin: 0 auto;
+    padding:  15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
   .card-instagram{
     flex-direction: column;
     padding: 10px 0;
   }
-  
+  .card-instagram img{
+  width: 150px;
+  height: 150px; 
+  cursor: pointer;
+  margin: 0 10px;
+}
   .botao-instagram {
     margin-top: 4%;
     margin-bottom: 2%;
@@ -723,3 +739,101 @@ nav {
     padding: 10px 20px;
   }
 }
+
+/*PAGINA CIDADE ESCOLHIDA DO ROTEIRO*/
+
+.bg-cidade-roteiro{
+  padding: 20px 10px;
+  margin-top: 4%;
+  background-color: var(--cor-white);
+}
+
+.textos-cidade-roteiro{
+  margin: 0 auto;
+  padding:  15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.texto-cidade p {
+  max-width: 660px;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  letter-spacing: 0.5px;
+  color: var(--cor-cinza);
+  text-align: left;
+  margin: 0px 60px;
+  word-break: break-word;
+}
+@media  (max-width: 768px) {
+  .bg-cidade-roteiro{
+    padding: 30px 10px;
+    margin-top: 4%;
+    background-color: var(--cor-white);
+  }
+  .textos-cidade-roteiro{
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+  }
+  .texto-cidade p {
+    font-size: 14px;
+    line-height: 1.2em;
+    letter-spacing: 0.5px;
+    color: var(--cor-cinza);
+    text-align: left;
+    margin: 15px;
+    word-break: break-word;
+  }
+  
+  }
+
+  
+/*PAGINA CIDADE ESCOLHIDA DO ROTEIRO*/
+
+.bg-cidade-roteiro{
+  padding: 20px 10px;
+  margin-top: 2%;
+  background-color: var(--cor-white);
+}
+
+.texto-cidade-tour{
+  margin: 0 auto;
+  padding:  15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto-cidade p {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  letter-spacing: 0.5px;
+  color: var(--cor-cinza);
+  text-align: left;
+}
+@media  (max-width: 768px) {
+  .bg-cidade-roteiro{
+    padding: 30px 10px;
+    margin-top: 4%;
+    background-color: var(--cor-white);
+  }
+  .textos-cidade-roteiro{
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+  }
+  .texto-cidade p {
+    font-size: 14px;
+    line-height: 1.2em;
+    letter-spacing: 0.5px;
+    color: var(--cor-cinza);
+    text-align: left;
+    margin: 15px;
+    word-break: break-word;
+  }
+  
+  }
