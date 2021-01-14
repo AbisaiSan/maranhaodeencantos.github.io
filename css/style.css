@@ -170,37 +170,6 @@ nav {
 
 /*INICIO DOS ESTILOS DOS DOCUMETOS*/
 
-/*SLIDER PRINCIPAL*/
-
-
-.banner-slides img{
-  width: 100%;
-  height: 500px;
-}
-/*JS DO SLIDE*/
-
-[data-slide-nav] {
-  display: block;
-  justify-content: center;
-  text-align: center;
-  margin-top: 20px;
-}
-[data-slide-nav] > button {
-  display: inline-block;
-  width: 12px;
-  margin: 4px;
-  height: 12px;
-  border: none;
-  padding: 0px;
-  border-radius: 6px;
-  background: #1d1d1d;
-  text-indent: -100px;
-  overflow: hidden;
-}
-[data-slide-nav] > button.active {
-  background: var(--cor-principal);
-}
-
 /*CURIOSIDADE MARANHÃO*/
 
 .bg-curiosidades-ma{
@@ -218,7 +187,6 @@ nav {
   justify-content: center;
   align-items: center;
 }
-
 
 .titulo-all {
   text-align: center;
@@ -511,56 +479,6 @@ nav {
     margin-bottom: 2%;
   }
 }
-/*DICAS DE UM TURISTA*/
-
-.bg-dicas-turistas{
-  margin-top: 4%;
-  padding: 60px 10px;
-  background-color: var(--cor-white);
-}
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.icone-dica-turista img{
-  width: 70px;
-  height: 60px;
-}
-.slide-dicas-turista {
-	padding: 10px 0;
-	max-width: 460px;
-	margin: 0 auto;
-}
-
-.texto-dica-turista p{
-	text-align: left;
-	font-family: Georgia, "Times New Roman", serif;
-	font-size: 1.2em;
-	line-height: 1.1em;
-	font-style: italic;
-  margin-bottom: 20px;
-  color: var(--cor-principal);
-}
-
-.nome-turista {
-	font-size: 1em;
-	font-weight: bold;
-	float: left;
-  font-style: normal;
-  color: var(--cor-principal);
-}
-
-#tag-turista {
-  font-size: 1em;
-  font-weight:550;
-  padding: 15px 0;
-  text-align: center;
-  color: var(--cor-secundaria);
-}
-[data-slide]{position:relative}[data-slide]>*{position:absolute;top:0;opacity:0;pointer-events:none}[data-slide]>.active{position:relative;opacity:1;transition:opacity .5s;z-index:1;pointer-events:auto}
 
 /*FOOTER*/
 

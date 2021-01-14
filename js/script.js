@@ -10,6 +10,13 @@
 			time: 5000,
 			nav: true
 		});
+
+		new SimpleSlide({
+			slide: "slider-aventuras",
+			time: 5000,
+			nav: true
+		});
+
 	}
 
 
