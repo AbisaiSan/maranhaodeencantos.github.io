@@ -359,34 +359,6 @@ nav {
 
 /*CIDADE ESCOLHIDA NO ROTEIRO DE P/ ONDE IR*/
 
-.bg-cidade-roteiro{
-  padding: 20px 10px;
-  margin-top: 4%;
-  background-color: var(--cor-white);
-}
-
-.textos-cidade-roteiro{
-  margin: 0 auto;
-  padding:  15px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.texto-cidade{
-  display: flex;
-}
-
-.texto-cidade p {
-  font-size: 1.2em;
-  line-height: 1.2em;
-  letter-spacing: 0.5px;
-  color: blue;
-  text-align: left;
-  margin: 0px 60px;
-  word-break: break-word;
-}
 
 
 /*PAGINA CIDADE ESCOLHIDA DO ROTEIRO*/
