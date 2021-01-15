@@ -105,3 +105,22 @@
   color: var(--cor-secundaria);
 }
 
+/*SLIDES GALERIA DE FOTOS*/
+  
+.bg-galeria-fotos{
+  padding: 30px 100px;
+  margin-top: 2%;
+  background-color: var(--cor-white);
+}
+
+.imagens-galeria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagens-galeria img {
+  width: 100%;
+  height: 350px;
+  border-radius: 2px;
+}

@@ -17,8 +17,12 @@
 			nav: true
 		});
 
+		new SimpleSlide({
+			slide: "galeria-de-fotos",
+			time: 5000,
+		});
+
 	}
 
-
-
+	
 console.log('teste')

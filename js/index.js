@@ -28,8 +28,38 @@ const navSlide = () => {
 
 navSlide();
 
+/*SLIDER GALERIA DE IMAGENS USADO NOS ROTEIROS, O QUE VC PROCURA, SEGMENTOS TURISTICOS, DESTINOS*/
 
-let paragrafo = document.querySelector('#paragrafo');
-paragrafo.addEventListener('click', (ev) => {
-  paragrafo.setAttribute('data-conteudo', 'Novo texto');
+var $simpleCarousel = document.querySelector("#options-autoplay-input");
+
+new Glider($simpleCarousel, {
+  slidesToShow: 2,
+  slidesToScroll: 2,
+  draggable: true,
+  dots: ".js-carousel--simple-dots",
+  arrows: {
+    prev: ".js-carousel--simple-prev",
+    next: ".js-carousel--simple-next",
+  },
 });
+
+
+new Glide('.glide', {
+  autoplay: 4000
+})
+
+var input = document.querySelector('')
+
+var glide = new Glide('#options-autoplay', {
+  autoplay: input.value,
+  hoverpause: false,
+  perView: 3
+})
+
+input.addEventListener('input', function (event) {
+  glide.update({
+    autoplay: (event.target.value != 0) ? event.target.value : false
+  })
+})
+
+glide.mount()

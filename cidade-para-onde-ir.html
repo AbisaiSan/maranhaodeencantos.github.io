@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/slides.css">
     <script src="https://kit.fontawesome.com/1e15d29bf3.js" crossorigin="anonymous"></script>
     <script>document.documentElement.classList.add("js");</script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -39,10 +40,22 @@
           <div class="line3"></div>
         </div>
     </nav>
-     <!--SLIDER  
-    
-        FIM SLIDER-->
-    
+    <!--SLIDER Principal-->
+    <section class="slider-principal">
+        <div data-slide="slider-principal">
+            <div class="banner-slides">
+                <img src="./img/banner4.jpg" alt="">
+            </div>
+            <div class="banner-slides">
+                <img src="./img/banner5.jpg" alt="">
+            </div>
+            <div class="banner-slides">
+                <img src="./img/banner6.png" alt="">
+            </div>
+        </div>
+        <div>
+    </section>
+    <!--FIM SLIDER-->
     <!--Area texto sobre a cidade escolhida no roteiro-->
     <section class="bg-cidade-roteiro">
         <div>
@@ -88,7 +101,21 @@
     </section>
 
     <!--SLIDE GALERIA DE FOTOS-->
-
+     <section class="bg-galeria-fotos">
+         <h2 class="titulo-all">GALERIA DE FOTOS</h2>
+        <div data-slide="galeria-de-fotos">
+            <div class="imagens-galeria">
+                <img src="./img/banner4.jpg" alt="">
+            </div>
+            <div class="imagens-galeria">
+                <img src="./img/banner5.jpg" alt="">
+            </div>
+            <div class="imagens-galeria">
+                <img src="./img/banner6.png" alt="">
+            </div>
+        </div>
+        <div>
+    </section>
     <!--SLIDE ROTEIROS-->
 
 <!--FOOTER-->
@@ -121,9 +148,9 @@
    </div>
 </footer>
 <img class="logo-footer" src="img/logo-footer 1.svg" alt="">
+<script src="./js/simple-slide.js"></script>
 <script src="./js/index.js"></script>
 <script src="./js/script.js"></script>
-<script src="./js/simple-slide.js"></script>
 
 </body>
 </html>
