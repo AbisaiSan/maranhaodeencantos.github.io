@@ -376,6 +376,9 @@ nav {
   align-items: center;
 }
 
+.texto-cidade{
+  display: flex;
+}
 .texto-cidade p {
   max-width: 660px;
   font-size: 1.2em;
