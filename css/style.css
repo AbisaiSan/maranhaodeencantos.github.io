@@ -359,8 +359,34 @@ nav {
 
 /*CIDADE ESCOLHIDA NO ROTEIRO DE P/ ONDE IR*/
 
+.bg-cidade-roteiro{
+  padding: 20px 10px;
+  margin-top: 4%;
+  background-color: var(--cor-white);
+}
 
+/*OK*/
 
+.textos-cidade-roteiro{
+  margin: 0 auto;
+  padding:  15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.texto-cidade p {
+  max-width: 660px;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  letter-spacing: 0.5px;
+  color: var(--cor-cinza);
+  text-align: left;
+  margin: 0px 60px;
+  word-break: break-word;
+}
+  
 /*PAGINA CIDADE ESCOLHIDA DO ROTEIRO*/
 
 .bg-cidade-roteiro{
@@ -382,36 +408,9 @@ nav {
   font-size: 1.2em;
   line-height: 1.2em;
   letter-spacing: 0.5px;
-  color: yellow;
+  color: var(--cor-cinza);
   text-align: left;
-
 }
-
-/*RESPONSIVIDADE*/
-
-@media  (max-width: 768px) {
-  .bg-cidade-roteiro{
-    padding: 30px 10px;
-    margin-top: 4%;
-    background-color: var(--cor-white);
-  }
-  .textos-cidade-roteiro{
-    justify-content: center ;
-    align-items: center;
-    flex-direction: column;
-  }
-  .texto-cidade p {
-    font-size: 14px;
-    line-height: 1.2em;
-    letter-spacing: 0.5px;
-    color: var(--cor-cinza);
-    text-align: left;
-    margin: 15px;
-    word-break: break-word;
-  }
-  
-  }
-
 
 /*FOOTER*/
 
