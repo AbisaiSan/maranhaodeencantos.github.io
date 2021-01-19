@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/glinder.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/slides.css">
+    
     <script src="https://kit.fontawesome.com/1e15d29bf3.js" crossorigin="anonymous"></script>
     <script>document.documentElement.classList.add("js");</script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -21,23 +23,22 @@
         <div class="menu-logo">
             <a href="index.html"> <img class="logo" src="./img/logo.png" alt="Logo do Maranhão de Encantos"></a>
         </div>
-    
+
         <ul class="nav-links">
-            <li><a href="./sobre-maranhao.html">Conheça o Maranhão</a></li>
-            <li><a href="./informacoes-uteis.html">Informações Úteis</a></li>
-            <li><a href="./para-onde-ir.html">Para onde ir?</a></li>
-            <li><a>O que você procura?</a></li>
-            <li><a>Nossos Vídeos</a></li>
-            
+            <li><a href="./sobre-maranhao.html">CONHEÇA O MARANHÃO</a></li>
+            <li><a href="./informacoes-uteis.html">INFORMAÇÕES ÚTEIS</a></li>
+            <li><a href="/cidade-para-onde-ir.html">PARA ONDE IR?</a></li>
+            <li><a href="./o-que-voce-procura.html">O QUE VOCÊ PROCURA?</a></li>
+            <li><a>NOSSOS VÍDEOS</a></li>
             <li><a href=""><img src="img/Brasil 1.svg" alt=""></a></li>
             <li><a href=""><img src="img/lupa 1.svg" alt=""></a></li>
             <li><a href=""><img src="img/ame 1.svg" alt=""></a></li>
         </ul>
         <!--Menu hambuguer-->
         <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
         </div>
     </nav>
     <!--SLIDER Principal-->
@@ -95,7 +96,7 @@
                     casas de cultura do centro histórico</p>
             </div>
             <div class="img-tour">
-                <img style="width: 300px; height: 220px;" src="img/Estatua dos pescadores.svg" alt="">
+                <img style="width: 300px; height: 220px;" src="img/Palácio dos Leões.svg" alt="">
             </div>
         </div>
     </section>
@@ -104,19 +105,41 @@
      <section class="bg-galeria-fotos">
          <h2 class="titulo-all">GALERIA DE FOTOS</h2>
         <div data-slide="galeria-de-fotos">
-            <div class="imagens-galeria">
+            <div class="imagens-galeria-fotos">
                 <img src="./img/banner4.jpg" alt="">
             </div>
-            <div class="imagens-galeria">
+            <div class="imagens-galeria-fotos">
                 <img src="./img/banner5.jpg" alt="">
             </div>
-            <div class="imagens-galeria">
+            <div class="imagens-galeria-fotos">
                 <img src="./img/banner6.png" alt="">
             </div>
         </div>
         <div>
     </section>
     <!--SLIDE ROTEIROS-->
+
+     <!--Slides o que você procura-->
+     <section class="bg-galeria-fotos">
+        <h2 class="titulo-all">ROTEIROS</h2>
+        <div class="wrapperForDemo">
+            <div class="glider-contain">
+                <div class="glider slides-galeria">
+                    <div class="imagens-galeria"><img src="/img/SLIDE-O-QUE-VC-PROCURA (1).png" alt=""></div>
+                    <div class="imagens-galeria"><img src="/img/SLIDE-O-QUE-VC-PROCURA (1).png" alt=""></div>
+                    <div class="imagens-galeria"><img src="/img/SLIDE-O-QUE-VC-PROCURA (1).png" alt=""></div>
+                    <div class="imagens-galeria"><img src="/img/SLIDE-O-QUE-VC-PROCURA (1).png" alt=""></div>
+                    <div class="imagens-galeria"><img src="/img/SLIDE-O-QUE-VC-PROCURA (1).png" alt=""></div>
+                    
+                </div>
+    
+                <button role="button" aria-label="Previous" class="glider-prev">«</button>
+                <button role="button" aria-label="Next" class="glider-next">»</button>
+                <div role="tablist" class="dots"></div>
+            </div>
+        </div>
+    </section>
+    <!--FIM SLIDER-->
 
 <!--FOOTER-->
 <footer class="footer">
@@ -148,6 +171,7 @@
    </div>
 </footer>
 <img class="logo-footer" src="img/logo-footer 1.svg" alt="">
+<script src="./js/glinder.min.js"></script>
 <script src="./js/simple-slide.js"></script>
 <script src="./js/index.js"></script>
 <script src="./js/script.js"></script>
