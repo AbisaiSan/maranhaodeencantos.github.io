@@ -30,7 +30,7 @@ navSlide();
 
 /*SLIDER GALERIA DE IMAGENS USADO NOS ROTEIROS, O QUE VC PROCURA, SEGMENTOS TURISTICOS, DESTINOS*/
 
-new Glider(document.querySelector('.glider'), {
+var slider =  new Glider(document.querySelector('.glider'), {
   slidesToShow: 5,
   slidesToScroll: 5,
   draggable: true,
@@ -38,22 +38,60 @@ new Glider(document.querySelector('.glider'), {
     prev: '.glider-prev',
     next: '.glider-next'
   },
-  dots: '.dots',
-  time: 5000,
+ 
   responsive: [
     {
-      breakpoint: 600,
+      breakpoint: 768,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToShow: 1,
+        slidesToScroll: 1,
       },
     },
     {
       breakpoint: 900,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
       },
     },
   ],
 });
+
+slideAutoPaly(slider, '.glider');
+
+function slideAutoPaly(glider, selector, delay = 2000, repeat = true) {
+    let autoplay = null;
+    const slidesCount = glider.track.childElementCount;
+    let nextIndex = 1;
+    let pause = true;
+
+    function slide() {
+        autoplay = setInterval(() => {
+            if (nextIndex >= slidesCount) {
+                if (!repeat) {
+                    clearInterval(autoplay);
+                } else {
+                    nextIndex = 0;
+                }
+            }
+            glider.scrollItem(nextIndex++);
+        }, delay);
+    }
+
+    slide();
+
+    var element = document.querySelector('.glinder');
+    element.addEventListener('mouseover', (event) => {
+        if (pause) {
+            clearInterval(autoplay);
+            pause = false;
+        }
+    }, 3000);
+
+    element.addEventListener('mouseout', (event) => {
+        if (!pause) {
+            slide();
+            pause = true;
+        }
+    }, 3000);
+}

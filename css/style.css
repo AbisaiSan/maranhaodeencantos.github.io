@@ -100,17 +100,18 @@ nav {
   .nav-links {
     position: absolute;
     right: 0px;
-    height: 100%!important;
-    top: 9.5vh;
+    top:10.9vh;
     /*Arrumando o menu hambuguer*/
     background-color: var(--cor-preto);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 70%;
+    width: 100%;
+    min-height: 100vh;
     /*Ajeitando a transição parar abrir o menu hambuguer*/
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+    z-index: 2;
   }
 
   .nav-links li {
@@ -556,7 +557,7 @@ width: 100%;
 
 /*RESPONSIVO CURIOSIDADES*/
 
-@media  (max-width: 768px) {
+@media (max-width: 768px) {
   .bg-curiosidades-ma{
     padding: 20px 5px;
   }
@@ -762,6 +763,10 @@ width: 100%;
   /*galeria slides*/
 
   @media  (max-width: 768px) {
+    .banner-slides img{
+      width: 100%;
+      height: 300px;
+    }
     .wrapperForDemo {
       max-width: 500px;
       margin: 0 auto;
@@ -800,4 +805,35 @@ width: 100%;
     text-align: justify;
     max-width: 250px;
   }
+  }
+
+  /*PAGIINAS NOTICIAS*/
+
+  .area-noticias{
+    padding: 60px 0; 
+  }
+
+  .noticias-top{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .autor{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .autor img{
+   
+  }
+
+  .texto-noticias{
+    padding-top: 40px;
+  }
+
+  .texto-noticias h2, p{
+   text-align: center;
   }
