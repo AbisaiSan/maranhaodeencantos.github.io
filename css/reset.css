@@ -22,14 +22,11 @@ nav, ul {
   }
 
 a {
+    list-style: none;
     text-decoration: none;
     cursor: pointer;
     
   }
-  
-a {
-	text-decoration: none;
-}
 
 /**
  * Remove list-style

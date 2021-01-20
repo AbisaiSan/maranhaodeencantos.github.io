@@ -1,839 +1,660 @@
 /*CONFIGURAÇÕES GERAIS*/
 
-:root{
-    --cor-bg:#eff0f3;
-    --cor-white:#FFFFFF;
-    --cor-secundaria:#C0513E;
-    --cor-principal:#3E528D;
-    --cor-cinza:#5e5959;
-    --cor-preto:#121212;
-    --cor-letra-menu:#606063;
+:root {
+    --cor-bg: #eff0f3;
+    --cor-white: #FFFFFF;
+    --cor-secundaria: #C0513E;
+    --cor-principal: #3E528D;
+    --cor-cinza: #5e5959;
+    --cor-preto: #121212;
+    --cor-letra-menu: #606063;
     --cor-textos: ;
+    --cor-texto-blog: #2c3040;
 }
-body{
+
+body {
     background-color: #F5F7F7;
     font-family: 'Roboto Slab', serif;
 }
 
+
 /*HEADER*/
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 nav {
-  display: flex;
-  /*Jogar os itens para o canto da página*/
-  justify-content: space-around;
-  align-items: center;
-  /*Mudando a cor de fundo do menu*/
-  background-color: var(--cor-white);
-  /*Fonte do menu*/
-  padding:  10px 0;
- 
-}
-
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-links a {
-  /*Mudando a cor dos itens*/
-  color: var(--cor-letra-menu);
-  font-size: 1.1em;
-  display: block;
-  padding: 10px ;
-  text-align: center; 
-}
-
-.burger {
-  /*Não deixando o menu hambuguer visivel */
-  display: none;
-  /*aparecendo a maozinha quando clica no menu hambuguer*/
-  cursor: pointer;
-}
-
-.burger div {
-  /*Ajeitando o menu Hambuguer*/
-  width: 25px;
-  height: 3px;
-  background-color:var(--cor-preto);
-  margin: 5px;
-  transition: all 0.3s ease;
-}
-
-/*Ajustando a altura*/
-@media screen and (max-width:1024px) {
-  .nav-links {
     display: flex;
     /*Jogar os itens para o canto da página*/
-    justify-content: stretch;
+    justify-content: space-around;
     align-items: center;
     /*Mudando a cor de fundo do menu*/
     background-color: var(--cor-white);
     /*Fonte do menu*/
-    margin: 0 auto;
-    padding:  15px 0;
-  }
-  .nav-links a {
+    padding: 10px 0;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links a {
     /*Mudando a cor dos itens*/
-    color: var(--cor-white);
+    color: var(--cor-letra-menu);
     font-size: 1.1em;
     display: block;
-    padding: 10px 5px ;
-    text-align: center; 
-    text-transform: uppercase;
-  }
+    padding: 10px;
+    text-align: center;
 }
+
+.burger {
+    /*Não deixando o menu hambuguer visivel */
+    display: none;
+    /*aparecendo a maozinha quando clica no menu hambuguer*/
+    cursor: pointer;
+}
+
+.burger div {
+    /*Ajeitando o menu Hambuguer*/
+    width: 25px;
+    height: 3px;
+    background-color: var(--cor-preto);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+/*Ajustando a altura*/
+
+@media screen and (max-width:1024px) {
+    .nav-links {
+        display: flex;
+        /*Jogar os itens para o canto da página*/
+        justify-content: stretch;
+        align-items: center;
+        /*Mudando a cor de fundo do menu*/
+        background-color: var(--cor-white);
+        /*Fonte do menu*/
+        margin: 0 auto;
+        padding: 15px 0;
+    }
+    .nav-links a {
+        /*Mudando a cor dos itens*/
+        color: var(--cor-white);
+        font-size: 1.1em;
+        display: block;
+        padding: 10px 5px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
 
 /*Ajustando a altura minima*/
+
 @media screen and (max-width:768px) {
-  body {
-    overflow-x: hidden;
-  }
-  .nav-links a{
-    text-align: center;
-    
-    font-size: 1.2em;
-
-  }
-  /*ajustando os itens para se adequar a altura min.*/
-  .nav-links {
-    position: absolute;
-    right: 0px;
-    top:10.9vh;
-    /*Arrumando o menu hambuguer*/
-    background-color: var(--cor-preto);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    min-height: 100vh;
-    /*Ajeitando a transição parar abrir o menu hambuguer*/
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-    z-index: 2;
-  }
-
-  .nav-links li {
-    opacity: 0;
-  }
-
-  .burger {
-    /*para aparecer o menu hambuguer quando a tela tiver pequena*/
-    display: block;
-  }
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links a {
+        text-align: center;
+        font-size: 1.2em;
+    }
+    /*ajustando os itens para se adequar a altura min.*/
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        top: 10.9vh;
+        /*Arrumando o menu hambuguer*/
+        background-color: var(--cor-preto);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        min-height: 100vh;
+        /*Ajeitando a transição parar abrir o menu hambuguer*/
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 2;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        /*para aparecer o menu hambuguer quando a tela tiver pequena*/
+        display: block;
+    }
 }
+
 
 /*Quando se clica no menu hambuguer, consegue abrir os itens*/
+
 .nav-active {
-  transform: translateX(0%);
+    transform: translateX(0%);
 }
+
 
 /*Animações quando se clica no menu hamburguer*/
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
 
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
+
 /*Transformando o menu em X*/
+
 .toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
 }
 
 .toggle .line2 {
-  opacity: 0;
-
+    opacity: 0;
 }
 
 .toggle .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-5px, -6px);
 }
-
 
 @media screen and (max-width: 768px) {
-  .nav-links.nav-active li {
-    opacity: 1;
-  }
+    .nav-links.nav-active li {
+        opacity: 1;
+    }
 }
+
 
 /*INICIO DOS ESTILOS DOS DOCUMETOS*/
 
+
 /*CURIOSIDADE MARANHÃO*/
 
-.bg-curiosidades-ma{
-  margin-top: 3%;
-  padding: 60px 10px;
-  background-color: var(--cor-white);
+.bg-curiosidades-ma {
+    margin-top: 3%;
+    padding: 60px 10px;
+    background-color: var(--cor-white);
 }
 
 .curiosidade-ma {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding:  15px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .titulo-all {
-  text-align: center;
-  font-size: 1.5rem;
-  line-height: 4rem;
-  color: var(--cor-principal);
-  
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 4rem;
+    color: var(--cor-principal);
 }
 
 .icones-curiosidades {
-  display: flex;
-  justify-content: center;
-  padding: 5px;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
 }
+
 .icones-curiosidades a {
-  margin: 0 15px;
-  text-decoration: none;
-  color:#0e2431;
-  font-weight: 500;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #0e2431;
+    font-weight: 500;
 }
+
 .icone-curiosidade img {
-  width: 100px;
-  height: 100px;
+    width: 100px;
+    height: 100px;
 }
+
 
 /*MARANHÃO ESTÁ NA MODA*/
 
 .bg-maranhao-moda {
-  margin-top: 3%;
-  padding: 60px 10px;
-  background-color: var(--cor-white);
+    margin-top: 3%;
+    padding: 60px 10px;
+    background-color: var(--cor-white);
 }
 
-.cards-maranhao-moda{
-  max-width: 1300px;
-  margin: 0 auto;
-  padding:  15px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-#card {
-  width: 250px;
-  height: 480px;
-  background-color: var(--cor-white);
-  border-radius: 5px;
-  margin:0 20px;
-  box-shadow: 0px 5px 5px rgba(187, 203, 217, 0.25), 10px 0px 10px rgba(187, 203, 217, 0.2);
-}
-
-.img-maranhao-moda img {
-  width: 250px;
-  height: 220px;
-  border-radius: 5px 5px 0px 0px;
-}
-
-.titulo-card-maranhao-moda h2{
-  text-align: left;
-  padding: 15px 5% 15px 5%;
-  margin-top: 2%;
-  font-size: 1.2rem;
-  color: var(--cor-preto);
-}
-
-.texto-card-maranhao-moda p {
-  padding: 0px 5% 10px 5%;
-  text-align: left  ;
-  margin-top: 2%;
-  font-size: 1rem;
-  color: var(--cor-cinza);
-}
-
-.botao-saiba-mara-moda {
-  cursor: pointer;
-  margin-top: 5%;
-  margin-left: 5%;
-  width: 105px;
-  height: 39px;
-  background-color: var(--cor-secundaria);
-  color: var(--cor-white);
-  border:none;
-  border-radius: 5px;
-}
-.botao-veja-mara-moda {
-  margin-top: 2%;
-  cursor: pointer;
-  width: 105.28px;
-  height: 39.67px;
-  background-color: var(--cor-secundaria);
-  color: var(--cor-white);
-  border:none;
-  border-radius: 5px;
-} 
-
-/*CALENDÁRIO*/
-
-.bg-calendario{
-  margin-top: 3%;
-  padding: 60px 10px;
-  background-color: var(--cor-white);
-}
-
-.calendario{
-  max-width: 1300px;
-  margin: 0 auto;
-  padding:  15px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.imagem-calendario img{
-  cursor: pointer;
-  width: 450px;
-  height: 250px;
-  margin: 0 40px;
-}
-
-.icone-calendario img{
-  cursor: pointer;
-  width: 150px;
-  height: 150px;
-}
-
-/*INSTAGRAM*/
-
-.bg-instagram{
-  margin-top: 3%;
-  padding: 60px 10px;
-  background-color: var(--cor-white);
-}
-
-.instagram{
-  max-width: 1300px;
-  margin: 0 auto;
-  padding:  15px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-instagram img{
-  width: 250px;
-  height: 224.62px; 
-  cursor: pointer;
-  margin: 0 20px;
-}
-
-.botao-instagram {
-  cursor: pointer;
-  margin-top: 3%;
-  width: 150px;
-  height: 39.67px;
-  background-color: var(--cor-secundaria);
-  color: var(--cor-white);
-  border:none;
-  border-radius: 5px;
-}
-
-/*PAGINA CONHEÇA O MARANHÃO*/
-
-.bg-sobre{
-  margin-top: 3%;
-  padding: 60px 10px;
-  background-color: var(--cor-white);
-}
-
-.borda-titulo h2{
-   border-bottom: 2px solid #C0513E; 
-   width: 59px;
-   height: 5px;
-}
-
-.texto-sobre{
-  max-width: 1000px;
-  margin: 0 auto;
-  padding:  15px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.texto-sobre p {
-  font-size: 1.2em;
-  line-height: 1.4em;
-  letter-spacing: 0.5px;
-  text-align: left;
-  color: var(--cor-cinza);
-  padding-bottom: 10px;
-}
-
-/*PÁGINA INFORMAÇÕES ÚTEIS*/
-
-.bg-info-uteis{
-  padding: 60px 10px;
-  margin-top: 4%;
-  background-color: var(--cor-white);
-}
-
-.cards-info{  
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items:stretch;
-}
-.borda{
-  border-bottom: 1px solid #121212;
-}
-
-.borda:last-child {border-bottom: none; }
-.card-info {
-  padding: 20px 0px;
-  max-width: 1450px;
-  display: flex; 
-  justify-content: space-between; 
-  align-items:stretch;
-} 
-.textos-info{
-  display: flex; 
-  padding: 0 20px;
-}
-.textos-info span{
-  max-width: 450px;
-  color: var(--cor-cinza);
-  font-size: 1em;
-  line-height: 1.2em;
-  display: flex; 
-  flex-wrap: wrap;
-  padding: 10px 20px;
-}
-.img-info img{
-  padding: 15px 0;
-  width: 300;
-  height: 200;
-}
-
-/* MESMO ESTILO PARA MARANHÃO DE ENCANTOS E CIDADE TOUR*/
-
-.bg-cidade-roteiro{
-  padding: 20px 10px;
-  margin-top: 4%;
-  background-color: var(--cor-white);
-}
-
-.textos-cidade-roteiro{
-  margin: 0 auto;
-  padding:  15px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.texto-cidade{
-  display: flex;
-}
-
-.texto-cidade p {
-  max-width: 670px;
-  font-size: 1.2em;
-  line-height: 1.2em;
-  letter-spacing: 0.5px;
-  color: var(--cor-cinza);
-  text-align: left;
-  margin: 0px 60px;
-  word-break: break-word;
-}
-
-.texto-cidade-tour{
-  margin: 0 auto;
-  padding:  15px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-/*DESTINOS*/
-
-.como-chegar h2{
-  padding: 15px 60px;
-  color: var(--cor-principal);
-  font-weight: bold;
-}
-/*FOOTER*/
-
-.footer{
-  padding: 60px 10px;
-  margin-top: 4%;
-  background-color: var(--cor-white);
-}
-
-.footer-info{  
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items:stretch;
-}
-
-.redes h2 {
-color: var(--cor-letra-menu);
-font-size: 1.2em;
-letter-spacing: 2px;
-text-align: center;
-}
-.rede-icone{
-margin-top: 2%;
-}
-.rede-icone i:hover{
-color: var(--cor-principal);
-}
-.rede-icone i{
-color: var(--cor-cinza);
-text-align: left;
-padding: 0px 5px;   
-font-size: 30px;
-
-}
-.contato{
-max-width: 330px;
-}
-.contato h2{
-color: var(--cor-letra-menu);
-font-size: 1.2em;
-line-height: 1.3em;
-letter-spacing: 1px;
-text-align: center;
-}
-
-.contato li{
-color: var(--cor-cinza);
-font-size: 1em;
-line-height: 1.2em;
-letter-spacing: 1px;
-text-align: left;
-}
-.maranhao-encantos{
-max-width: 330px;
-}
-
-.maranhao-encantos h2{
-color: var(--cor-letra-menu);
-font-size: 1.2em;
-line-height: 1.3em;
-letter-spacing: 1px;
-text-align: center;
-}
-
-.maranhao-encantos li{
-cursor: pointer;
-color: var(--cor-cinza);
-font-size: 1em;
-line-height: 1.2em;
-letter-spacing: 1px;
-text-align: left;
-}
-
-.logo-footer{
-width: 100%;
-}
-
-
-
-
-/*RESPOSIVIDADE GERAL*/
-
-
-/*RESPONSIVO CURIOSIDADES*/
-
-@media (max-width: 768px) {
-  .bg-curiosidades-ma{
-    padding: 20px 5px;
-  }
-  .curiosidade-ma {
+.cards-maranhao-moda {
+    max-width: 1300px;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .icone-curiosidade img{
-    width: 60px;
-    height: 60px;
-  }
-  .titulo-all {
-    text-align: center;
-    font-size: 18px;
-    line-height: 1rem;
-    color: var(--cor-principal);
-    
-  }
-  
-  .icones-curiosidades {
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-  }
-  .icones-curiosidades a {
-    margin: 0 2px;
-    text-decoration: none;
-    font-size: 15px;
-    color:#0e2431;
-    font-weight: 500;
-  }
-}
-
-/*RESPOSIVIDADE MARANHÃO ESTÁ NA MODA*/
-
-@media  (max-width: 768px) {
-  .titulo-all {
-    text-align: center;
-    font-size: 18px;
-    line-height: 1rem;
-    color: var(--cor-principal);
-    
-  }
-  .bg-maranhao-moda{
-    padding: 20px 10px;
-  }
-  .cards-maranhao-moda{
-    flex-direction: column;
-    padding: 10px 0;
-  }
-  #card {
-    width: 250px;
-    height: 390px;
-    margin-top: 5%;
-  }
-  .img-maranhao-moda img {
-    width: 250px;
-    height: 170px;
-    border-radius: 5px 5px 0px 0px;
-  }
-  .titulo-card-maranhao-moda h2{
-    text-align: left;
-    padding: 10px 5% 15px 5%;
-    margin-top: 1%;
-    font-size: 16px;
-    color: var(--cor-preto);
-  }
-  .texto-card-maranhao-moda p {
-    padding: 0px 5% 10px 5%;
-    text-align: left  ;
-    margin-top: 1%;
-    font-size: 14px;
-    color: var(--cor-cinza);
-  }
-  .botao-veja-mara-moda {
-    margin-top: 4%;
-  }
-}
-
-/*RESPONSIVIDADE CALENDARIO*/
-
-@media  (max-width: 768px) {
-  
-  .bg-calendario{
-    padding: 20px 10px;
-  }
-  .calendario{
-    flex-direction: column;
-    padding: 10px 0;
-  }
-  .imagem-calendario img{
-    cursor: pointer;
-    width: 350px;
-    height: 300px;
-    margin: 0 40px;
-  }
-  .botao-veja-mara-moda {
-    margin-top: 4%;
-  }
-}
-
-/*RESPONSIVIDADE INSTAGRAM*/
-
-@media  (max-width: 768px) {
-  
-  .bg-instagram{
-    padding: 20px 10px;
-  }
-  .instagram{
-   
-    margin: 0 auto;
-    padding:  15px 0;
+    padding: 15px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-  }
-  .card-instagram{
-    flex-direction: column;
-    padding: 10px 0;
-  }
-  .card-instagram img{
-  width: 150px;
-  height: 150px; 
-  cursor: pointer;
-  margin: 0 10px;
-}
-  .botao-instagram {
-    margin-top: 4%;
-    margin-bottom: 2%;
-  }
 }
 
-/*RESPONSIVIDADE CONHEÇA O MARANHÃO*/
-@media  (max-width: 768px) {
-  .texto-sobre p {
-    font-size: 0.9em;
-    line-height: 1.2em;
+#card {
+    width: 250px;
+    height: 480px;
+    background-color: var(--cor-white);
+    border-radius: 5px;
+    margin: 0 20px;
+    box-shadow: 0px 5px 5px rgba(187, 203, 217, 0.25), 10px 0px 10px rgba(187, 203, 217, 0.2);
+    transition: all 0.5s;
+}
+
+.img-maranhao-moda img {
+    width: 250px;
+    height: 220px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+#card:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.);
+}
+
+.titulo-card-maranhao-moda h2 {
+    text-align: left;
+    padding: 15px 5% 15px 5%;
+    margin-top: 2%;
+    font-size: 1.2rem;
+    color: var(--cor-preto);
+}
+
+.texto-card-maranhao-moda p {
+    padding: 0px 5% 10px 5%;
+    text-align: left;
+    margin-top: 2%;
+    font-size: 1rem;
+    color: var(--cor-cinza);
+}
+
+.botao-saiba-mara-moda {
+    cursor: pointer;
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 105px;
+    height: 39px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-white);
+    border: none;
+    border-radius: 5px;
+}
+
+.botao-veja-mara-moda {
+    margin-top: 2%;
+    cursor: pointer;
+    width: 105.28px;
+    height: 39.67px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-white);
+    border: none;
+    border-radius: 5px;
+}
+
+
+/*CALENDÁRIO*/
+
+.bg-calendario {
+    margin-top: 3%;
+    padding: 60px 10px;
+    background-color: var(--cor-white);
+}
+
+.calendario {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-calendario img {
+    cursor: pointer;
+    width: 450px;
+    height: 250px;
+    margin: 0 40px;
+}
+
+.icone-calendario img {
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+}
+
+
+/*INSTAGRAM*/
+
+.bg-instagram {
+    margin-top: 3%;
+    padding: 60px 10px;
+    background-color: var(--cor-white);
+}
+
+.instagram {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-instagram img {
+    width: 250px;
+    height: 224.62px;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.botao-instagram {
+    cursor: pointer;
+    margin-top: 3%;
+    width: 150px;
+    height: 39.67px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-white);
+    border: none;
+    border-radius: 5px;
+}
+
+
+/*PAGINA CONHEÇA O MARANHÃO*/
+
+.bg-sobre {
+    margin-top: 3%;
+    padding: 60px 10px;
+    background-color: var(--cor-white);
+}
+
+.borda-titulo h2 {
+    border-bottom: 2px solid #C0513E;
+    width: 59px;
+    height: 5px;
+}
+
+.texto-sobre {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-sobre p {
+    font-size: 1.2em;
+    line-height: 1.4em;
     letter-spacing: 0.5px;
     text-align: left;
     color: var(--cor-cinza);
     padding-bottom: 10px;
-  }
 }
 
 
-/*RESPONSIVIDADE INFORMAÇÕES ÚTEIS*/
+/*PÁGINA INFORMAÇÕES ÚTEIS*/
 
-@media  (max-width: 768px) {
-  .bg-info-uteis{
-    padding: 30px 10px;
-   
-  }
-  .cards-info{  
-    flex-direction: column;
-  } 
-  .card-info {
-    flex-direction: column;
-  }
-  .img-info img{
-    padding: 15px 0;
-    width: 300px;
-    height: 200px;
-  }
-  .textos-info{
-    display: flex; 
-    flex-wrap: wrap;
-    padding: 10px 20px;
-  }
-  .textos-info span{
-    display: flex; 
-    flex-wrap: wrap;
-    padding: 10px 20px;
-  }
-}
-
-/*CIDADE ESCOLHIDA NO ROTEIRO DE P/ ONDE IR*/
-
-@media  (max-width: 768px) {
-  .bg-cidade-roteiro{
-    padding: 30px 10px;
+.bg-info-uteis {
+    padding: 60px 10px;
     margin-top: 4%;
     background-color: var(--cor-white);
-  }
-  .textos-cidade-roteiro{
-    justify-content: center ;
+}
+
+.cards-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.borda {
+    border-bottom: 1px solid #121212;
+}
+
+.borda:last-child {
+    border-bottom: none;
+}
+
+.card-info {
+    padding: 20px 0px;
+    max-width: 1450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.textos-info {
+    display: flex;
+    padding: 0 20px;
+}
+
+.textos-info span {
+    max-width: 450px;
+    color: var(--cor-cinza);
+    font-size: 1em;
+    line-height: 1.2em;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
+.img-info img {
+    padding: 15px 0;
+    width: 300;
+    height: 200;
+}
+
+
+/* MESMO ESTILO PARA MARANHÃO DE ENCANTOS E CIDADE TOUR*/
+
+.bg-cidade-roteiro {
+    padding: 20px 10px;
+    margin-top: 4%;
+    background-color: var(--cor-white);
+}
+
+.textos-cidade-roteiro {
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-    flex-direction: column;
-  }
-  .texto-cidade p {
-    font-size: 14px;
+}
+
+.texto-cidade {
+    display: flex;
+}
+
+.texto-cidade p {
+    max-width: 670px;
+    font-size: 1.2em;
     line-height: 1.2em;
     letter-spacing: 0.5px;
     color: var(--cor-cinza);
     text-align: left;
-    margin: 15px;
+    margin: 0px 60px;
     word-break: break-word;
-  }
-  
-  }
+}
 
-  /*galeria slides*/
+.texto-cidade-tour {
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 
-  @media  (max-width: 768px) {
-    .banner-slides img{
-      width: 100%;
-      height: 300px;
-    }
-    .wrapperForDemo {
-      max-width: 500px;
-      margin: 0 auto;
-    }
-    .imagens-galeria img {
-      width: 220px;
-      height: 200px;
-      border-radius: 2px;
-    }
-    }
-  
-  
-/*RESPONSIVIDADE FOOTER*/
+.img-tour {
+    width: 300px;
+    height: 220px;
+}
 
-@media  (max-width: 768px) {
-  
-  .redes h2, .contato h2, .maranhao-encantos h2{
-    padding: 10px 0;
-  }
-  
-  
-   .contato{
-    max-width: 255px;
-    margin: 5% 0;
-  }
-  
-  .contato li{
+
+/*FOOTER*/
+
+.footer {
+    padding: 60px 10px;
+    margin-top: 4%;
+    background-color: var(--cor-white);
+}
+
+.footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.redes h2 {
+    color: var(--cor-letra-menu);
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.rede-icone {
+    margin-top: 2%;
+}
+
+.rede-icone i:hover {
+    color: var(--cor-principal);
+}
+
+.rede-icone i {
+    color: var(--cor-cinza);
+    text-align: left;
+    padding: 0px 5px;
+    font-size: 30px;
+}
+
+.contato {
+    max-width: 330px;
+}
+
+.contato h2 {
+    color: var(--cor-letra-menu);
+    font-size: 1.2em;
+    line-height: 1.3em;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.contato li {
     color: var(--cor-cinza);
     font-size: 1em;
     line-height: 1.2em;
     letter-spacing: 1px;
-    text-align: justify;
-  }
-  
-  .maranhao-encantos li{
-    text-align: justify;
-    max-width: 250px;
-  }
-  }
+    text-align: left;
+}
 
-  /*PAGIINAS NOTICIAS*/
+.maranhao-encantos {
+    max-width: 330px;
+}
 
-  .area-noticias{
-    padding: 60px 0; 
-  }
+.maranhao-encantos h2 {
+    color: var(--cor-letra-menu);
+    font-size: 1.2em;
+    line-height: 1.3em;
+    letter-spacing: 1px;
+    text-align: center;
+}
 
-  .noticias-top{
+.maranhao-encantos li {
+    cursor: pointer;
+    color: var(--cor-cinza);
+    font-size: 1em;
+    line-height: 1.2em;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.logo-footer {
+    width: 100%;
+}
+
+
+/*PAGIINAS NOTICIAS*/
+
+.imagem-da-noticia img {
+    background-image: url('../img/banner6.png');
+    height: 300px;
+    width: 100%;
+}
+
+.container-noticias {
+    padding: 60px 10px;
+    background-color: var(--cor-white);
+}
+
+.navegacao-paginas {
     display: flex;
-    justify-content: center ;
-    align-items: center;
-    gap: 60px;
-  }
+    padding: 10px 15%;
+    gap: 2px;
+}
 
-  .autor{
+.navegacao-paginas li a {
+    font-size: 1em;
+    color: var(--cor-cinza);
+}
+
+.titulo-da-noticia blockquote {
+    margin: 2% 0;
+    padding: 10px 15%;
+    font-size: 2em;
+    line-height: 1.5em;
+    text-align: left;
+    text-transform: uppercase;
+    color: #2c3040;
+}
+
+.titulo-da-noticia h3 {
+    padding: 10px 15%;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    text-align: left;
+    color: #2c3040;
+}
+
+.textos-paragrafo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.textos-paragrafo p {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    text-align: justify;
+    padding: 10px 15%;
+    color: var(--cor-texto-blog);
+}
+
+
+/*PAGINA DESTINO DO SEGMENTO TURISTICO*/
+
+.img-destino {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-  }
+    align-items: center;
+}
 
-  .autor img{
-   
-  }
-
-  .texto-noticias{
-    padding-top: 40px;
-  }
-
-  .texto-noticias h2, p{
-   text-align: center;
-  }
+.como-chegar h2 {
+    padding: 15px 60px;
+    color: var(--cor-principal);
+    font-weight: bold;
+}
