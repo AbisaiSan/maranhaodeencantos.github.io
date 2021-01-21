@@ -3,12 +3,61 @@
 
 /*Estilo para tablets*/
 
-@media only screen and (min-width: 769px) and (max-width: 1100px) {}
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+    /*AREA CURIOSIDADES ICONES INDEX*/
+
+     /*RESPOSIVIDADE MARANHÃO ESTÁ NA MODA*/
+     #card {
+        width: 250px;
+        height: 480px;
+        background-color: var(--cor-white);
+        border-radius: 5px;
+        margin: 10px;
+        box-shadow: 0px 5px 5px rgba(187, 203, 217, 0.25), 10px 0px 10px rgba(187, 203, 217, 0.2);
+        transition: all 0.5s;
+    }
+
+    /*CALENDARIO*/
+    .calendario {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    /*FOOTER*/
+
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .redes h2 {
+        color: var(--cor-letra-menu);
+        font-size: 1.2em;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .redes li {
+        color: var(--cor-letra-menu);
+        font-size: 1em;
+        text-align: justify;
+    }
+
+    .contato li{
+        max-width: 300px;
+    }
+    
+    
+    
+   
+}
 
 
 /*Estilo para smartphone TELAS DE 425PX A 787*/
 
-@media only screen and (max-width: 767px) {
+@media only screen and  (max-width: 767px) {
     /*AREA CURIOSIDADES ICONES INDEX*/
     .bg-curiosidades-ma {
         padding: 20px 5px;
@@ -123,6 +172,23 @@
         color: var(--cor-texto-blog);
     }
     /*RESPONSIVIDADE CALENDARIO*/
+     .event_container{
+    width:100%;
+     height:480px;
+     background: #fff;
+    flex-direction: column;
+  }
+    .event_bg{
+      width:100%;
+      height:250%;
+      min-height: 250px;
+      border-top-right-radius: 3px;
+      border-bottom-left-radius: 0;
+    }
+    .event_info{
+      width:100%;
+      height:230px;
+    }
     .bg-calendario {
         padding: 20px 10px;
     }
@@ -132,9 +198,9 @@
     }
     .imagem-calendario img {
         cursor: pointer;
-        width: 350px;
-        height: 300px;
-        margin: 0 40px;
+        width: 355px;
+        height: 250px;
+        padding: 0;
     }
     .botao-veja-mara-moda {
         margin-top: 4%;
@@ -257,30 +323,34 @@
         height: 200px;
         border-radius: 2px;
     }
-}
 
+    /*FOOTER*/
 
-/*RESPONSIVIDADE FOOTER*/
-
-@media (max-width: 768px) {
-    .redes h2,
-    .contato h2,
-    .maranhao-encantos h2 {
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .redes h2 {
+        color: var(--cor-letra-menu);
+        font-size: 1.2em;
+        text-align: center;
         padding: 10px 0;
     }
-    .contato {
-        max-width: 255px;
-        margin: 5% 0;
-    }
-    .contato li {
-        color: var(--cor-cinza);
+    
+    .redes li {
+        color: var(--cor-letra-menu);
         font-size: 1em;
-        line-height: 1.2em;
-        letter-spacing: 1px;
         text-align: justify;
     }
-    .maranhao-encantos li {
-        text-align: justify;
-        max-width: 250px;
+
+    .contato li{
+        max-width: 300px;
     }
+    
+
+    
 }
+

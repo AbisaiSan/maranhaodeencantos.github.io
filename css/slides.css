@@ -33,6 +33,15 @@
   background: var(--cor-principal);
 }
 
+
+
+.titulo-slides {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1.5em;
+  color: var(--cor-principal);
+  font-weight: 500;
+}
 /*SLIDER O QUE VOCÊ PROCURA*/
 .bg-slider-aventuras {
   margin-top: 3%;
