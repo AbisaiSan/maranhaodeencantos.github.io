@@ -1,60 +1,60 @@
 const navSlide = () => {
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-links');
-  //Fazendo aparecer os itens
-  const navLinks = document.querySelectorAll('.nav-links li');
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    //Fazendo aparecer os itens
+    const navLinks = document.querySelectorAll('.nav-links li');
 
-  //Fazendo o clique do menu funcionar
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('nav-active');
+    //Fazendo o clique do menu funcionar
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
 
-    //Animações links
-    navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = '';
-      } else {
-        link.style.animation = `navlinkFade 0.5s ease forwards ${index/7+1.5}s`
+        //Animações links
+        navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navlinkFade 0.5s ease forwards ${index/7+1.5}s`
 
-      }
+            }
+        });
+        //Transformando em X
+        burger.classList.toggle('toggle');
+
+
     });
-    //Transformando em X
-    burger.classList.toggle('toggle');
-
-
-  });
 
 
 }
+
 
 navSlide();
 
 /*SLIDER GALERIA DE IMAGENS USADO NOS ROTEIROS, O QUE VC PROCURA, SEGMENTOS TURISTICOS, DESTINOS*/
 
-var slider =  new Glider(document.querySelector('.glider'), {
-  slidesToShow: 5,
-  slidesToScroll: 5,
-  draggable: true,
-  arrows: {
-    prev: '.glider-prev',
-    next: '.glider-next'
-  },
- 
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
+var slider = new Glider(document.querySelector('.glider'), {
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    draggable: true,
+    arrows: {
+        prev: '.glider-prev',
+        next: '.glider-next'
     },
-    {
-      breakpoint: 900,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      },
-    },
-  ],
+
+    responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            },
+        },
+        {
+            breakpoint: 900,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            },
+        },
+    ],
 });
 
 slideAutoPaly(slider, '.glider');
