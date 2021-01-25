@@ -4,44 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!--LINKS CSS-->
-     <link rel="stylesheet" href="/css/glinder.min.css">
-     <link rel="stylesheet" href="/css/reset.css">
-     <link rel="stylesheet" href="/css/style.css">
-     <link rel="stylesheet" href="/css/slides.css">
-     <link rel="stylesheet" href="/css/responsivo.css">
+    <!--LINKS CSS-->
+    <link rel="stylesheet" href="/css/glinder.min.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/slides.css">
+    <link rel="stylesheet" href="/css/responsivo.css">
 
     <script src="https://kit.fontawesome.com/1e15d29bf3.js" crossorigin="anonymous"></script>
     <script>
         document.documentElement.classList.add("js");
     </script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link href = "https://fonts.googleapis.com/css2? family = Bree + Serif & display = swap" rel = "folha de estilo">
 
     <title>Maranhão de Encantos</title>
 </head>
 
 <body>
+    
     <header>
         <nav>
             <div class="menu-logo">
                 <a href="index.html"> <img class="logo" src="./img/logo.png" alt="Logo do Maranhão de Encantos"></a>
             </div>
 
-            <ul class="nav-links">
+            <ul class="nav-links" >
                 <li><a href="./sobre-maranhao.html">CONHEÇA O MARANHÃO</a></li>
                 <li><a href="./informacoes-uteis.html">INFORMAÇÕES ÚTEIS</a></li>
-                <li><a href="/cidade-para-onde-ir.html">PARA ONDE IR?</a></li>
+                <div class="dropdown">
+
+                    <li><a href="#" class="drop">PARA ONDE IR?</a> <!-- Item dropdown do menu, leva a class 'drop' para a adição da seta -->
+                        <div class="columns"> <!-- Inicia o box que conterá o conteúdo do dropdown -->
+                            <ul class="col"> <!-- Inicia o box de uma das 3 colunas com os links -->
+                                <div class="icone-p-onde-ir">
+                                    <span>São Luis</span> <!-- Título da coluna -->
+                                    <img src="/img/slz-para-onde-ir.PNG" alt="">
+                                </div>
+                                <li><a href="/cidade-para-onde-ir.html">SLZ</a></li>
+                                <li><a>Alcantara</a></li>
+                                <li><a >Raposa</a></li>
+                                <li><a >São Jose de ribamar</a></li>
+                            </ul> <!-- fecha o box de uma das 3 colunas com os links -->
+                            <ul class="col">
+                                <div class="icone-p-onde-ir">
+                                    <span>Delta das Américas</span>
+                                    <img src="img/delta-p-onde-ir-icone.PNG" alt="">
+                                </div>
+                                <li><a>Tutoia</a></li>
+                            </ul>
+                            <ul class="col">
+                                <div class="icone-p-onde-ir">
+                                   
+                                    <span>Lençóis Maranhenses</span>
+                                    <img src="/img/lecois-icone-p-onde-ir.PNG" alt="">
+                                </div>
+                                <li><a>Barreirinhas</a></li>
+                                <li><a>Santo Amaro</a></li>
+                            </ul>
+                            <ul class="col">
+                                <div class="icone-p-onde-ir">
+                                  
+                                    <span>Chapada das Mesas</span>
+                                    <img src="img/chapada-icone-p-onde-ir.PNG" alt="">
+                                </div>
+                                <li><a>Riachão</a></li>
+                                <li><a>Carolina</a></li>
+                            </ul>
+                        </div> <!-- Fecha o box que conterá o conteúdo do dropdown -->
+                    </li> <!-- Fecha item dropdown do menu -->
+                </div>
                 <li><a href="./o-que-voce-procura.html">O QUE VOCÊ PROCURA?</a></li>
-                <li><a>NOSSOS VÍDEOS</a></li>
                 <li>
-                    <a href=""><img src="img/Brasil 1.svg" alt=""></a>
+                    <a href=""><img src="img/Brasil 1.svg" alt="Bandeira do Brasil para seleção de idioma"></a>
                 </li>
+                <div class="buscar">
+                    <li>
+                        <a  class="hover-icone" href=""><i class="fas fa-search"></i></a>
+                    </li>
+                </div>
                 <li>
-                    <a href=""><img src="img/lupa 1.svg" alt=""></a>
-                </li>
-                <li>
-                    <a href=""><img src="img/ame 1.svg" alt=""></a>
+                    <a  class="hover-icone" href=""><i class="far fa-heart"></i></a>
                 </li>
             </ul>
             <!--Menu hambuguer-->
@@ -51,23 +96,57 @@
                 <div class="line3"></div>
             </div>
         </nav>
+
+        <!--modal buscar-->
+        <div class="modal-overlay">
+            <div class="modal">
+                <a class="close-modal">
+                    <i class="fas fa-times"></i>
+                </a>
+                <form  action="">
+                    <label id="title-pesquisa"  for="">Digite sua pesquisa aqui</label>
+                    <div class="buscar-aparece">
+                        <a  href=""><img id="buscar-icone-modal" src="img/lupa 1.svg" alt=""></a>
+                       <input type="search" placeholder="Ex: Destinos, Atrativos, Experiências">
+                    </div>
+                </form>
+            </div>
+        </div>
     </header>
+
+   
 
     <!--SLIDER Principal-->
     <section class="slider-principal">
         <div data-slide="slider-principal">
-            <div class="banner-slides">
-                <img src="./img/banner4.jpg" alt="">
+            <div  class="banner-slides">
+                <img src="./img/banner3casarao.jpg" alt="">
             </div>
             <div class="banner-slides">
-                <img src="./img/banner5.jpg" alt="">
+                <img src="./img/bannerlecois.jpg" alt="">
             </div>
             <div class="banner-slides">
-                <img src="./img/banner6.png" alt="">
+                <img src="./img/bannerpocoazul.jpg" alt="">
+            </div>
+            <div class="banner-slides">
+                <img src="./img/bannerchapada.jpg" alt="">
+            </div>
+            <div class="banner-slides">
+                <img src="./img/bannercachoeira.png" alt="">
             </div>
         </div>
-        <div>
+       
+           
     </section>
+
+    <div class="rede-icone-slides">
+        <ul>
+            <li> <a href=""><i class="fab fa-instagram fa-2x icon-instagram"></i></a></li>
+            <li> <a href=""><i class="fab fa-facebook fa-2x size-icon icon-facebook"></i></a></li>
+            <li><a href=""><i class="fab fa-spotify fa-2x size-icon icon-spotify"></i></a></li>
+            <li><i  class="fab fa-youtube fa-2x size-icon icon-youtube"></i></li>
+        </ul>
+    </div>
     <!--FIM SLIDER-->
 
     <!--ÁREA DE CURIOSIDADE MARANHÃO-->
@@ -103,10 +182,107 @@
                     </a>
                 </li>
             </div>
-
+            <hr style="margin: 0 25%;width: 50%; height: 2px; background-color: #c4c4c4;">
         </div>
     </section>
 
+  
+    <!--SESSÃO DESTINOS MAIS PROCURADOS FOTOS-->
+    <section class="bg-galeria-fotos-destino">
+      
+
+        <div>
+            <h2  class="titulo-all">Conheça nossos destinos mais procurados</h2>
+        </div>
+        <div  class="img-destinos">
+        
+            <div  class="zoom-effect-container">
+                
+                <div class="image-card">
+                    <div class="info-img-destino">
+                      <h3>Destino</h3>
+                        <div class="icone-fav">
+                           <li>
+                               <a  class="hover-icone" href=""><i class="far fa-heart fa-2x"></i></a>
+                           </li>
+                        </div>
+                      <h2>Chapada das mesas</h2>
+                        <div class="icone-seta">
+                            <li>
+                                <i class="fas fa-arrow-right fa-2x"></i>
+                            </li>
+                         </div>
+                    </div>
+                    <img  src="img/chapadadestinoprocurado.jpg"/>
+                </div>
+              </div>
+              <div  class="zoom-effect-container">
+                <div class="image-card">
+                    <div class="info-img-destino">
+                        <h3>Destino</h3>
+                          <div class="icone-fav">
+                             <li>
+                                 <a  class="hover-icone" href=""><i class="far fa-heart fa-2x"></i></a>
+                             </li>
+                          </div>
+                        <h2>Lençois Maranhenses</h2>
+                          <div class="icone-seta">
+                              <li>
+                                  <a href="/destinos.html">
+                                
+                                    <i class="fas fa-arrow-right fa-2x"></i>
+                                </a>
+                              </li>
+                           </div>
+                      </div>
+                    <img src="img/lecoisdestinosprocurados.jpg"/>
+                </div>
+              </div>
+              <div  class="zoom-effect-container">
+                
+                <div class="image-card">
+                    <div class="info-img-destino">
+                      <h3>Destino</h3>
+                        <div class="icone-fav">
+                           <li>
+                               <a  class="hover-icone" href=""><i class="far fa-heart fa-2x"></i></a>
+                           </li>
+                        </div>
+                      <h2>Chapada das mesas</h2>
+                        <div class="icone-seta">
+                            <li>
+                                <i class="fas fa-arrow-right fa-2x"></i>
+                            </li>
+                         </div>
+                    </div>
+                    <img  src="img/chapadadestinoprocurado.jpg"/>
+                </div>
+              </div>
+
+              <div  class="zoom-effect-container">
+                <div class="image-card">
+                    <div class="info-img-destino">
+                        <h3>Destino</h3>
+                          <div class="icone-fav">
+                             <li>
+                                 <a  class="hover-icone" href=""><i class="far fa-heart fa-2x"></i></a>
+                             </li>
+                          </div>
+                        <h2>Lençois Maranhenses</h2>
+                          <div class="icone-seta">
+                              <li>
+                                  <a href="/destinos.html">
+                                
+                                    <i class="fas fa-arrow-right fa-2x"></i>
+                                </a>
+                              </li>
+                           </div>
+                      </div>
+                    <img src="img/lecoisdestinosprocurados.jpg"/>
+                </div>
+              </div>
+        </div>
+    </section>
     <!--Slides o que você procura-->
     <section class="bg-galeria-fotos">
         <h2 class="titulo-slides">O QUE VOCÊ PROCURA?</h2>
@@ -211,8 +387,8 @@
                 <img src="./img/CARD-INSTAGRAM.png" alt="">
             </div>
         </div>
-        <div  class="botao-instagram">
-            <button>SIGA-NOS EM <i class="fab fa-instagram"></i></button>
+        <div class="botao-instagram">
+            <a href="https://www.instagram.com/materradeencantos/?hl=pt-br" target="_blank"> <button>SIGA-NOS EM <i class="fab fa-instagram"></i></button></a>
         </div>
     </section>
 
@@ -224,15 +400,18 @@
         </div>
         <div class="slide-dicas-turista" data-slide="quote">
             <blockquote class="texto-dica-turista">
-                <p>“Eu amo meu maranhão e todas as suas belezas, o povo a cultura como disse um certo poeta, minha terra tem palmeiras onde canta o sábia”</p>
+                <p>“Eu amo meu maranhão e todas as suas belezas, o povo a cultura como disse um certo poeta, minha terra
+                    tem palmeiras onde canta o sábia”</p>
                 <cite class="nome-turista">Fulano de Tal</cite>
             </blockquote>
             <blockquote class="texto-dica-turista">
-                <p>“Aqueles que ainda não foram ao Maranhão, não sabem o que estão perdendo. As belezas dessa terra são absurdas. Nunca vi nada igual....”</p>
+                <p>“Aqueles que ainda não foram ao Maranhão, não sabem o que estão perdendo. As belezas dessa terra são
+                    absurdas. Nunca vi nada igual....”</p>
                 <cite class="nome-turista">Beltrano</cite>
             </blockquote>
             <blockquote class="texto-dica-turista">
-                <p>“De São Luís a Riachão tudo no Maranhão é lindo e encantador, a cultura e gastronomia são ricas. Um lugar inesquecível guardado na memoria”</p>
+                <p>“De São Luís a Riachão tudo no Maranhão é lindo e encantador, a cultura e gastronomia são ricas. Um
+                    lugar inesquecível guardado na memoria”</p>
                 <cite class="nome-turista">Outro Fulano</cite>
             </blockquote>
         </div>
@@ -247,57 +426,59 @@
         <h2 class="titulo-all">CALENDÁRIO DE EVENTOS</h2>
         <div class="calendario">
             <div class="event_container">
-                <div class="event_bg imagem-calendario" >
+                <div class="event_bg imagem-calendario">
                     <img src="/img/Lençóis Jazz & Blues Festival 1.png" alt="">
                 </div>
                 <div class="event_info">
-                  <div class="event_title">
-                    <h4>O Vendedor de Sonhos</h4>
-                  </div>
-                  <div class="event_desc">
-                    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
-                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
-                  </div>
-                  <div class="event_footer">
-                    <div class="event_date">
-                      <p>16 de Fev, 2021</p>
+                    <div class="event_title">
+                        <h4>O Vendedor de Sonhos</h4>
                     </div>
-                    <div class="event_more">
-                      <a href="#" class="btn_more">
-                        Saiba mais
-                      </a>
+                    <div class="event_desc">
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+                            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                        </p>
                     </div>
-                  </div>
+                    <div class="event_footer">
+                        <div class="event_date">
+                            <p>16 de Fev, 2021</p>
+                        </div>
+                        <div class="event_more">
+                            <a href="#" class="btn_more">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="event_container">
-                <div class="event_bg imagem-calendario" >
+            </div>
+            <div class="event_container">
+                <div class="event_bg imagem-calendario">
                     <img src="/img/Lençóis Jazz & Blues Festival 1.png" alt="">
                 </div>
                 <div class="event_info">
-                  <div class="event_title">
-                    <h4>O Vendedor de Sonhos</h4>
-                  </div>
-                  <div class="event_desc">
-                    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
-                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
-                  </div>
-                  <div class="event_footer">
-                    <div class="event_date">
-                      <p>16 de Fev, 2021</p>
+                    <div class="event_title">
+                        <h4>O Vendedor de Sonhos</h4>
                     </div>
-                    <div class="event_more">
-                      <a href="#" class="btn_more">
-                        Saiba mais
-                      </a>
+                    <div class="event_desc">
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+                            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                        </p>
                     </div>
-                  </div>
+                    <div class="event_footer">
+                        <div class="event_date">
+                            <p>16 de Fev, 2021</p>
+                        </div>
+                        <div class="event_more">
+                            <a href="#" class="btn_more">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
                 </div>
-              </div>
+            </div>
         </div>
     </section>
 
-   
+
     <!--FOOTER-->
     <footer class="footer">
         <div class="footer-info">
@@ -328,8 +509,10 @@
         </div>
     </footer>
     <img class="logo-footer" src="img/logo-footer 1.svg" alt="">
+
     <script src="/js/glinder.min.js"></script>
     <script src="./js/simple-slide.js"></script>
+    <script src="./js/simple-anime.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/script.js"></script>
 

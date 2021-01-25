@@ -24,5 +24,9 @@
 
 	}
 
-	
+	if(window.SimpleSlide) {
+		
+	new SimpleAnime();
+
+	}
 console.log('teste')

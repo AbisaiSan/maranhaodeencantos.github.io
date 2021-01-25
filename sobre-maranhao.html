@@ -23,50 +23,117 @@
 </head>
 
 <body>
-    <nav>
-        <div class="menu-logo">
-            <a href="index.html"> <img class="logo" src="./img/logo.png" alt="Logo do Maranhão de Encantos"></a>
-        </div>
+    <header>
+        <nav>
+            <div class="menu-logo">
+                <a href="index.html"> <img class="logo" src="./img/logo.png" alt="Logo do Maranhão de Encantos"></a>
+            </div>
 
-        <ul class="nav-links">
-            <li><a href="./sobre-maranhao.html">CONHEÇA O MARANHÃO</a></li>
-            <li><a href="./informacoes-uteis.html">INFORMAÇÕES ÚTEIS</a></li>
-            <li><a href="/cidade-para-onde-ir.html">PARA ONDE IR?</a></li>
-            <li><a href="./o-que-voce-procura.html">O QUE VOCÊ PROCURA?</a></li>
-            <li><a>NOSSOS VÍDEOS</a></li>
-            <li>
-                <a href=""><img src="img/Brasil 1.svg" alt=""></a>
-            </li>
-            <li>
-                <a href=""><img src="img/lupa 1.svg" alt=""></a>
-            </li>
-            <li>
-                <a href=""><img src="img/ame 1.svg" alt=""></a>
-            </li>
-        </ul>
-        <!--Menu hambuguer-->
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+            <ul class="nav-links" >
+                <li><a href="./sobre-maranhao.html">CONHEÇA O MARANHÃO</a></li>
+                <li><a href="./informacoes-uteis.html">INFORMAÇÕES ÚTEIS</a></li>
+                <div class="dropdown">
+
+                    <li><a href="#" class="drop">PARA ONDE IR?</a> <!-- Item dropdown do menu, leva a class 'drop' para a adição da seta -->
+                        <div class="columns"> <!-- Inicia o box que conterá o conteúdo do dropdown -->
+                            <ul class="col"> <!-- Inicia o box de uma das 3 colunas com os links -->
+                                <div class="icone">
+                                    <span>São Luis</span> <!-- Título da coluna -->
+                                    <img src="/img/slz-para-onde-ir.PNG" alt="">
+                                </div>
+                                <li><a href="/cidade-para-onde-ir.html">SLZ</a></li>
+                                <li><a>Alcantara</a></li>
+                                <li><a >Raposa</a></li>
+                                <li><a >São Jose de ribamar</a></li>
+                            
+                            </ul> <!-- fecha o box de uma das 3 colunas com os links -->
+                            <ul class="col">
+                                <div class="icone">
+                                    <span>Delta das Américas</span>
+                                    <img src="img/delta-p-onde-ir-icone.PNG" alt="">
+                                </div>
+                                <li><a>Tutoia</a></li>
+                            </ul>
+                            <ul class="col">
+                                <div class="icone">
+                                   
+                                    <span>Lençóis Maranhenses</span>
+                                    <img src="/img/lecois-icone-p-onde-ir.PNG" alt="">
+                                </div>
+                                <li><a>Barreirinhas</a></li>
+                                <li><a>Santo Amaro</a></li>
+                            </ul>
+                            <ul class="col">
+                                <div class="icone">
+                                  
+                                    <span>Chapada das Mesas</span>
+                                    <img src="img/chapada-icone-p-onde-ir.PNG" alt="">
+                                </div>
+                                <li><a>Riachão</a></li>
+                                <li><a>Carolina</a></li>
+                            </ul>
+                        </div> <!-- Fecha o box que conterá o conteúdo do dropdown -->
+                    </li> <!-- Fecha item dropdown do menu -->
+                </div>
+                <li><a href="./o-que-voce-procura.html">O QUE VOCÊ PROCURA?</a></li>
+                <li>
+                    <a href=""><img src="img/Brasil 1.svg" alt="Bandeira do Brasil para seleção de idioma"></a>
+                </li>
+                <div class="buscar">
+                    <li>
+                        <a  class="hover-icone" href=""><i class="fas fa-search"></i></a>
+                    </li>
+                </div>
+                <li>
+                    <a  class="hover-icone" href=""><i class="far fa-heart"></i></a>
+                </li>
+            </ul>
+            <!--Menu hambuguer-->
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+
+        <!--modal buscar-->
+        <div class="modal-overlay">
+            <div class="modal">
+                <a class="close-modal">
+                    <i class="fas fa-times"></i>
+                </a>
+                <form  action="">
+                    <label id="title-pesquisa"  for="">Digite sua pesquisa aqui</label>
+                    <div class="buscar-aparece">
+                        <a  href=""><img id="buscar-icone-modal" src="img/lupa 1.svg" alt=""></a>
+                       <input type="search" placeholder="Ex: Destinos, Atrativos, Experiências">
+                    </div>
+                </form>
+            </div>
         </div>
-    </nav>
-    <!--SLIDER Principal-->
-    <section class="slider-principal">
-        <div data-slide="slider-principal">
-            <div class="banner-slides">
-                <img src="./img/banner4.jpg" alt="">
-            </div>
-            <div class="banner-slides">
-                <img src="./img/banner5.jpg" alt="">
-            </div>
-            <div class="banner-slides">
-                <img src="./img/banner6.png" alt="">
-            </div>
+    </header>
+ <!--SLIDER Principal-->
+ <section class="slider-principal">
+    <div data-slide="slider-principal">
+        <div  class="banner-slides">
+            <img src="./img/banner3casarao.jpg" alt="">
         </div>
-        <div>
-    </section>
-    <!--FIM SLIDER-->
+        <div class="banner-slides">
+            <img src="./img/bannerlecois.jpg" alt="">
+        </div>
+        <div class="banner-slides">
+            <img src="./img/bannerpocoazul.jpg" alt="">
+        </div>
+        <div class="banner-slides">
+            <img src="./img/bannerchapada.jpg" alt="">
+        </div>
+        <div class="banner-slides">
+            <img src="./img/bannercachoeira.png" alt="">
+        </div>
+    </div>
+   
+       
+</section>
 
     <!--Area Sobre Conheça o maranhão-->
     <section class="bg-sobre">
@@ -105,8 +172,8 @@
                 <img src="./img/CARD-INSTAGRAM.png" alt="">
             </div>
         </div>
-        <div  class="botao-instagram">
-            <button>SIGA-NOS EM <i class="fab fa-instagram"></i></button>
+        <div class="botao-instagram">
+            <a href="https://www.instagram.com/materradeencantos/?hl=pt-br" target="_blank"> <button>SIGA-NOS EM <i class="fab fa-instagram"></i></button></a>
         </div>
     </section>
 

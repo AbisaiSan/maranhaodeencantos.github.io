@@ -29,6 +29,24 @@ const navSlide = () => {
 
 navSlide();
 
+/*MODAL BUSCAR*/
+
+const modalOverlay = document.querySelector('.modal-overlay');
+    const buscar_all = document.querySelectorAll('.buscar');
+
+    for (let buscar of buscar_all){
+        buscar.addEventListener("click", function(){
+  
+          modalOverlay.classList.add("ativar")
+          
+        })
+    }
+
+    document.querySelector('.close-modal').addEventListener("click", function(){
+      modalOverlay.classList.add("desativar")
+     
+    })
+
 /*SLIDER GALERIA DE IMAGENS USADO NOS ROTEIROS, O QUE VC PROCURA, SEGMENTOS TURISTICOS, DESTINOS*/
 
 var slider = new Glider(document.querySelector('.glider'), {
@@ -95,3 +113,5 @@ function slideAutoPaly(glider, selector, delay = 2000, repeat = true) {
         }
     }, 3000);
 }
+
+

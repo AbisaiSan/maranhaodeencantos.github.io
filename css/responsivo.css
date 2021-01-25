@@ -4,6 +4,120 @@
 /*Estilo para tablets*/
 
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
+
+     /*redes sociais fixo*/
+
+     .rede-icone-slides{
+        display: flex;
+        justify-content: flex-start;
+        align-items:center;
+        z-index: 1;
+        color: #ffffff;
+       margin-top: -20%;
+    }
+
+   .icon-instagram{
+    margin-left:0;
+    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);border-radius: 30px;
+    
+   }
+
+   .icon-facebook{
+
+    color: #3b5998; 
+    font-size: 33px;
+   }
+   .icon-spotify{
+    color:#1DB954; 
+    font-size: 33px;
+   }
+
+   .icon-youtube{
+    color: #bb0000;
+    font-size: 33px;
+   }
+    .rede-icone-slides ul{
+        flex-direction: row;
+        display: flex;
+        z-index: 1; 
+        position: absolute;
+    }
+    
+    .rede-icone-slides li a i {
+        padding: 2px;
+    }
+
+    /*imagens destinos procurados index*/
+    .bg-galeria-fotos-destino{
+        margin-top: 2%;
+        padding: 20px 0;
+        background-color: var(--cor-white);
+    }
+    .img-destinos{
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+      
+      .zoom-effect-container {
+        float: left;
+        position: relative;
+        width: 100%;
+        height:400px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    
+    .image-card img{
+        width: 100%;
+        height:400px;
+        padding: 2px;
+    }
+    .image-card img {
+      -webkit-transition: 0.4s ease;
+      transition: 0.4s ease;
+    }
+    
+    .zoom-effect-container:hover .image-card img {
+      -webkit-transform: scale(1.08);
+      transform: scale(1.08);
+    }
+    
+    /*info do destino index*/
+
+    /*info destino img*/
+
+.info-img-destino{
+    margin-top: 5%;
+    position:absolute;
+   color: #ffffff;
+    display: flex;
+  padding: 30px;
+    flex-direction: column;
+    z-index: 0;
+    
+}
+.info-img-destino h3{
+    text-align: center;
+    width: 90px;
+    background: #565861;
+    border-radius: 7px;
+}
+.info-img-destino h3, h2{
+    font-size: 1.4em;
+   
+}
+.icone-fav, .icone-seta{
+    padding: 30px 0;
+}
+.icone-fav:hover{
+    color: #C0513E;
+}
+.icone-seta:hover{
+    color: #3E528D;
+}
     /*AREA CURIOSIDADES ICONES INDEX*/
 
      /*RESPOSIVIDADE MARANHÃO ESTÁ NA MODA*/
@@ -57,10 +171,23 @@
 
 /*Estilo para smartphone TELAS DE 425PX A 787*/
 
-@media only screen and  (max-width: 767px) {
+@media only screen and   (max-width: 767px) {
+
+    .cadastur img{
+        width: 200px;
+        height: 80px;
+    }
+    .cadastur{
+        display: flex; padding: 0 15px;
+    }
+    .cadastur a{
+        padding-left:0px;
+    }
+    
     /*AREA CURIOSIDADES ICONES INDEX*/
     .bg-curiosidades-ma {
         padding: 20px 5px;
+        margin-top: 20%;
     }
     .curiosidade-ma {
         margin: 0 auto;
@@ -105,7 +232,7 @@
     }
     #card {
         width: 250px;
-        height: 390px;
+        height: 400px;
         margin-top: 5%;
     }
     .img-maranhao-moda img {
@@ -127,6 +254,7 @@
         font-size: 14px;
         color: var(--cor-cinza);
     }
+   
     .botao-veja-mara-moda {
         margin-top: 4%;
     }
@@ -298,7 +426,7 @@
     /*SLIDER PRINCIPAL*/
     .banner-slides img {
         width: 100%;
-        height: 200px;
+        height: 500px;
     }
     /*SLIDES ROTEIROS - SEGEMENTO TURISTICO - O QUE VOCÊ PROCURA?*/
     .titulo-slides {
@@ -323,7 +451,84 @@
         height: 200px;
         border-radius: 2px;
     }
+/*===Modal===*/
 
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.60);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    opacity: 1;
+    overflow: auto;
+    z-index: 3;
+    
+    
+  }
+  
+  
+  
+  .modal {
+    background-color: rgba(0,0,0,.9);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+  }
+  
+  .modal .close-modal {
+    font-size: 25px;
+    color: var(--cor-white);
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    cursor: pointer;
+   
+    z-index: 3;
+  }
+  
+  /*===Modal.Active===*/
+  .modal-overlay.ativar {
+    opacity: 1;
+    visibility: visible;
+    z-index: 3;
+  }
+
+  .modal-overlay.desativar{
+    visibility: hidden;
+  }
+  
+  #title-pesquisa{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 1.2em;
+    padding: 60px 0;
+    color: var(--cor-white);
+}
+  .buscar-aparece{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+ 
+ 
+  .buscar-aparece input{
+    color: #fff;
+    font-size: 14px;
+    font-family: 'FF_Clan_OT_News';
+    background: transparent;
+    width: 300px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #6e6e6e;
+    padding-left: 10px;
+  }
+
+  #buscar-icone-modal{
+      margin-left: 0 25px;
+  }
     /*FOOTER*/
 
     .footer-info {
@@ -350,7 +555,184 @@
         max-width: 300px;
     }
     
+    /*dropdown*/
 
+    .dropdown{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .icone-p-onde-ir img{
+        display: none;
+    }
+    
+    
+    
+    .dropdown  li .columns {
+        display: flex;
+        position:absolute; /* Importante para posicionar o conteúdo do dropdown */
+        left:-9999px; /* Esconde o dropdown quando o mouse não está em cima do link */
+        background:var(--cor-white);
+        width: 100%;
+    }
+    .dropdown li:hover .columns{
+        left:0;
+    }
+    .dropdown  ul li {
+    
+        font-size:12px;
+    }
+    .dropdown  li ul.col{
+        margin-top: 5%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        position: relative;
+        padding:0;
+        flex-direction: column;
+        width:100%;
+    }
+    .dropdown  li ul.col li {
+        display: flex;
+        border-bottom:1px solid #fff;
+        list-style-type:none;
+        font-size:12px;
+        position:relative;
+        flex-direction: column;
+    }
+    .dropdown  li .col li:hover {
+    
+        border-bottom:1px solid #aaa;
+    }
+    .dropdown li .col span{
+        padding-left: 0px;
+        font-size:9px;
+        color:#333;
+        font-weight:bold;
+    }
+    .dropdown  li .col li a{
+        padding: 0;
+        font-size:9px;
+        color:#aaa;
+    }
+    .dropdown  li .col li a:hover{color:#333;}
+      
+    /*redes sociais fixo*/
+
+    .rede-icone-slides{
+        display: flex;
+        justify-content: flex-start;
+        align-items:center;
+        z-index: 1;
+        color: #ffffff;
+       margin-top: -20%;
+    }
+
+   .icon-instagram{
+    margin-left:0;
+    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);border-radius: 30px;
+    
+   }
+
+   .icon-facebook{
+
+    color: #3b5998; 
+    font-size: 33px;
+   }
+   .icon-spotify{
+    color:#1DB954; 
+    font-size: 33px;
+   }
+
+   .icon-youtube{
+    color: #bb0000;
+    font-size: 33px;
+   }
+    .rede-icone-slides ul{
+        flex-direction: row;
+        display: flex;
+        z-index: 1; 
+        position: absolute;
+    }
+    
+    .rede-icone-slides li a i {
+        padding: 2px;
+    }
+
+    /*imagens destinos procurados index*/
+    .bg-galeria-fotos-destino{
+        margin-top: 2%;
+        padding: 20px 0;
+        background-color: var(--cor-white);
+    }
+    .img-destinos{
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+      
+      .zoom-effect-container {
+        float: left;
+        position: relative;
+        width: 100%;
+        height:400px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    
+    .image-card img{
+        width: 100%;
+        height:400px;
+        padding: 2px;
+    }
+    .image-card img {
+      -webkit-transition: 0.4s ease;
+      transition: 0.4s ease;
+    }
+    
+    .zoom-effect-container:hover .image-card img {
+      -webkit-transform: scale(1.08);
+      transform: scale(1.08);
+    }
+    
+    /*info do destino index*/
+
+    /*info destino img*/
+
+.info-img-destino{
+    margin-top: 5%;
+    position:absolute;
+   color: #ffffff;
+    display: flex;
+  padding: 30px;
+    flex-direction: column;
+    z-index: 0;
+    
+}
+.info-img-destino h3{
+    text-align: center;
+    width: 90px;
+    background: #565861;
+    border-radius: 7px;
+}
+.info-img-destino h3, h2{
+    font-size: 1.4em;
+   
+}
+.icone-fav, .icone-seta{
+    padding: 30px 0;
+}
+.icone-fav:hover{
+    color: #C0513E;
+}
+.icone-seta:hover{
+    color: #3E528D;
+}
     
 }
 

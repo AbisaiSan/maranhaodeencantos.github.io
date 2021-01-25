@@ -2,6 +2,31 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Quicksand:300,400,500,700');
 /*CONFIGURAÇÕES GERAIS*/
 
+/* 6 Adicione o CSS Essêncial abaixo */
+[data-anime] {
+    opacity: 0;
+  }
+  .anime {
+    opacity: 1;
+    transform: none;
+    transition: transform .8s, opacity .8s;
+  }
+  
+  /* 7 CSS personalizado dependendo da animação desejada */
+  .fadeInDown {
+    transform: translate3d(0,-20px,0);
+  }
+  .fadeInUp {
+    transform: translate3d(0,20px,0);
+  }
+  .fadeInRight {
+    transform: translate3d(20px,0,0);
+  }
+  .fadeInLeft {
+    transform: translate3d(-20px,0,0);
+  }
+
+
 :root {
     --cor-bg: #eff0f3;
     --cor-white: #FFFFFF;
@@ -16,9 +41,7 @@
 
 body {
     background-color: #F5F7F7;
-    font-family: 'Roboto Slab', serif;
 }
-
 a {
     text-decoration: none;
     color: inherit;
@@ -42,7 +65,7 @@ nav {
     /*Fonte do menu*/
     padding: 10px 0;
     position: fixed;
-    z-index: 3;
+    z-index: 2;
 }
 
 .nav-links {
@@ -50,15 +73,22 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position:relative;
 }
 
-.nav-links a {
+.nav-links a{
     /*Mudando a cor dos itens*/
     color: var(--cor-letra-menu);
     font-size: 1.1em;
-    display: block;
+    font-weight: 400;
     padding: 10px;
     text-align: center;
+}
+.nav-links a:hover{
+    color: var(--cor-secundaria);
+}
+.hover-icone img:hover{
+    color: var(--cor-secundaria);
 }
 
 .burger {
@@ -189,7 +219,7 @@ nav {
 /*CURIOSIDADE MARANHÃO*/
 
 .bg-curiosidades-ma {
-    margin-top: 3%;
+    margin-top: 23%;
     padding: 60px 10px;
     background-color: var(--cor-white);
 }
@@ -229,6 +259,10 @@ nav {
 .icone-curiosidade img {
     width: 100px;
     height: 100px;
+}
+.icone-curiosidade img:hover {
+    
+    color: var(--cor-secundaria);
 }
 
 
@@ -304,7 +338,7 @@ nav {
     cursor: pointer;
     width: 105.28px;
     height: 39.67px;
-    background-color: var(--cor-secundaria);
+  
     color: var(--cor-white);
     border: none;
     border-radius: 5px;
@@ -621,7 +655,7 @@ a.btn_more:hover{
 
 .footer {
     padding: 30px 10px;
-    margin-top: 4%;
+    margin-top: 2%;
     background-color: var(--cor-white);
 }
 
@@ -737,8 +771,416 @@ a.btn_more:hover{
     font-weight: bold;
 }
 
-/*calendario novo*/
+/*===Modal===
 
-@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Quicksand:300,400,500,700');
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.60);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    opacity: 1;
+    overflow: auto;
+    z-index: 3;
+    -webkit-transition: opacity 700ms ease-in;
+    -moz-transition: opacity 700ms ease-in;
+    transition: opacity 700ms ease-in;
+    
+  }
+  
+  
+  
+  .modal {
+    background-color: rgba(0,0,0,.9);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transition: opacity 700ms ease-in;
+    -moz-transition: opacity 700ms ease-in;
+    transition: opacity 700ms ease-in;
+    z-index: 3;
+  }
+  
+  .modal .close-modal {
+    font-size: 25px;
+    color: var(--cor-white);
+    position: absolute;
+    right: 430px;
+    top: 20px;
+    cursor: pointer;
+    -webkit-transition: opacity 700ms ease-in;
+    -moz-transition: opacity 700ms ease-in;
+    transition: opacity 700ms ease-in;
+    z-index: 3;
+  }
+  
+  /*===Modal.Active===
+  .modal-overlay.ativar {
+    opacity: 1;
+    visibility: visible;
+    z-index: 3;
+  }
 
+  .modal-overlay.desativar{
+    visibility: hidden;
+  }
+  
+  #title-pesquisa{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 1.2em;
+    padding: 60px 0;
+    color: var(--cor-white);
+}
+  .buscar-aparece{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+ 
+ 
+  .buscar-aparece input{
+    color: #fff;
+    font-size: 14px;
+    font-family: 'FF_Clan_OT_News';
+    background: transparent;
+    width: 620px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #6e6e6e;
+    padding-left: 10px;
+  }
+
+  #buscar-icone-modal{
+      margin-left: 0 25px;
+  }
+
+  */
+  /*DROPDONW*/
+
+  
+.dropdown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+   
+}
+
+
+
+
+.dropdown  li .columns {
+    display: flex;
+	position:absolute; /* Importante para posicionar o conteúdo do dropdown */
+	left:-9999px; /* Esconde o dropdown quando o mouse não está em cima do link */
+	background:var(--cor-white);
+	width: 100%;
+}
+.dropdown li:hover .columns{
+	left:0;
+}
+.dropdown  ul li {
+
+	font-size:12px;
+}
+.dropdown  li ul.col{
+    margin-top: 5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+	position: relative;
+	padding:0;
+    flex-direction: column;
+	width:100%;
+}
+.dropdown  li ul.col li {
+    display: flex;
+	border-bottom:1px solid #fff;
+	list-style-type:none;
+	font-size:12px;
+    position:relative;
+    flex-direction: column;
+}
+.dropdown  li .col li:hover {
+
+	border-bottom:1px solid #aaa;
+}
+.dropdown li .col span{
+    padding-left: 10px;
+	font-size:12px;
+	color:#333;
+	font-weight:bold;
+}
+.dropdown  li .col li a{
+	font-size:12px;
+	color:#aaa;
+}
+.dropdown  li .col li a:hover{color:#333;}
+  
+  
+.cadastur{
+    display: flex; padding: 0 15px;
+}
+.cadastur a{
+    display: flex; padding-left:200px;
+}
+
+/*temperatura*/
+
+
+.temperatura {
+    
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.temperatura_container{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width:100%;
+  height:230px;
+  background: #fff;
+  max-width: 750px;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.25), 0 8px 8px 0 rgba(0,0,0,.15);
+  margin: 20px 10px;  
+  
+}
+
+
+  .temperatura_bg{
+   width:40%;
+   height:100%;
+   background:#356e84;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  .temperatura_bg span{
+      margin-top: 35%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-white);
+    font-size: 1.4em;
+  }
+
+  .temperatura_info {
+    width:60%;
+    height:100%;
+    padding: 10px 0px;
+    
+}
+    .temperatura_title{
+      display: flex;
+      width:100%;
+      height:50px;
+      text-align: left;
+      padding: 0 20px;
+      align-items: center;
+}
+      h4{
+        color: var(--cor-principal);
+        font-size: 26px;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    .temperatura_desc{
+      display: flex;
+      width:100%;
+      height:calc(100% - 100px);
+      text-align: left;
+      padding: 0 20px;
+}
+      p{
+        font-size: 16px;
+        font-weight: 500;
+        color: #565861;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    .temperatura_footer{
+      display: flex;
+      width:100%;
+      height:50px;
+      align-items: center;
+      justify-content: space-between;
+}
+      .temperatura_date p{
+        font-size: 19px;
+        font-weight: 600;
+        color: #333;
+        text-align: left;
+        padding: 0 20px;
+      }
+
+      .temperatura_more{
+        display: flex;
+        width:auto;
+        height:100%;
+        align-items: center;
+}
+        a.temperatura_more{
+          display: flex;
+          width:auto;
+          height:40px;
+          align-items: center;
+          padding: 0 15px;
+          text-decoration: none;
+          color: var(--cor-secundaria);
+          font-size: 19px;
+          font-weight: 600;
+          border-radius: 2px;
+          margin:0 10px;
+          transition: background .3s, color .2s ease-in;
+}
+
+
+.rede-icone-slides{
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    z-index: 1;
+    color: #ffffff;
+   margin-top: -23%;
+}
+.rede-icone-slides ul{
+    flex-direction: column;
+    display: flex;
+    z-index: 1; 
+    position: fixed;
+}
+
+.rede-icone-slides li a i {
+    padding: 5px;
+}
+
+.icon-instagram{
+    margin-right:2px;
+    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);border-radius: 30px;
+    
+   }
+
+   .icon-facebook{
+    color: #3b5998; 
+    font-size: 40px;
+   }
+   .icon-spotify{
+    color:#1DB954; 
+    font-size: 40px;
+   }
+
+   .icon-youtube{
+    color: #bb0000;
+    font-size: 40px;
+   }
+
+.bg-galeria-fotos-destino{
+    margin-top: 2%;
+    padding: 60px 10px;
+    background-color: var(--cor-white);
+}
+.img-destinos{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+  .zoom-effect-container {
+    float: left;
+    position: relative;
+    width: 1700px;
+    height:500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.image-card img{
+    width: 1700px;
+    height:500px;
+    padding: 2px;
+}
+.image-card img {
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.zoom-effect-container:hover .image-card img {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+}
+
+
+/*info destino img*/
+
+.info-img-destino{
+    margin-top: 5%;
+    position:absolute;
+   color: #ffffff;
+    display: flex;
+  padding: 40px;
+    flex-direction: column;
+    z-index: 2;
+    
+}
+.info-img-destino h3{
+    text-align: center;
+    width: 90px;
+    background: #565861;
+    border-radius: 7px;
+}
+.info-img-destino h3, h2{
+    font-size: 1.4em;
+   
+}
+.icone-fav, .icone-seta{
+    padding: 30px 0;
+}
+.icone-fav:hover{
+    color: #C0513E;
+}
+.icone-seta:hover{
+    color: #3E528D;
+}
+/*ANIMAÇÃO IMAGENS*/
+
+[data-anime] {
+    opacity: 0;
+  }
+  .anime {
+    opacity: 1;
+    transform: none;
+    transition: transform .8s, opacity .8s;
+  }
+
+  .fadeInDown {
+    transform: translate3d(0,-20px,0);
+  }
+  .fadeInUp {
+    transform: translate3d(0,20px,0);
+  }
+  .fadeInRight {
+    transform: translate3d(20px,0,0);
+  }
+  .fadeInLeft {
+    transform: translate3d(-20px,0,0);
+  }
