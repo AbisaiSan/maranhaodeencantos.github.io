@@ -50,8 +50,8 @@ const modalOverlay = document.querySelector('.modal-overlay');
 /*SLIDER GALERIA DE IMAGENS USADO NOS ROTEIROS, O QUE VC PROCURA, SEGMENTOS TURISTICOS, DESTINOS*/
 
 var slider = new Glider(document.querySelector('.glider'), {
-    slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToShow:6,
+    slidesToScroll: 6,
     draggable: true,
     arrows: {
         prev: '.glider-prev',
@@ -68,8 +68,8 @@ var slider = new Glider(document.querySelector('.glider'), {
         {
             breakpoint: 900,
             settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
+                slidesToShow: 4,
+                slidesToScroll: 3,
             },
         },
     ],

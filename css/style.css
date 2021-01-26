@@ -219,7 +219,7 @@ nav {
 /*CURIOSIDADE MARANHÃO*/
 
 .bg-curiosidades-ma {
-    margin-top: 23%;
+    margin-top: 30%;
     padding: 60px 10px;
     background-color: var(--cor-white);
 }
@@ -260,9 +260,9 @@ nav {
     width: 100px;
     height: 100px;
 }
-.icone-curiosidade img:hover {
-    
-    color: var(--cor-secundaria);
+
+.icone-curiosidade:hover{
+        fill: #d52b1e;
 }
 
 
@@ -520,7 +520,7 @@ a.btn_more:hover{
 /*PAGINA CONHEÇA O MARANHÃO*/
 
 .bg-sobre {
-    margin-top: 3%;
+    margin-top: 30%;
     padding: 60px 10px;
     background-color: var(--cor-white);
 }
@@ -555,7 +555,7 @@ a.btn_more:hover{
 
 .bg-info-uteis {
     padding: 60px 10px;
-    margin-top: 4%;
+    margin-top: 30%;
     background-color: var(--cor-white);
 }
 
@@ -608,7 +608,7 @@ a.btn_more:hover{
 
 .bg-cidade-roteiro {
     padding: 20px 10px;
-    margin-top: 4%;
+    margin-top: 30%;
     background-color: var(--cor-white);
 }
 
@@ -764,20 +764,23 @@ a.btn_more:hover{
     justify-content: center;
     align-items: center;
 }
-
+.img-destino-divisor img{
+    width: 100%;
+    height: 300px;
+}
 .como-chegar h2 {
     padding: 15px 60px;
     color: var(--cor-principal);
     font-weight: bold;
 }
 
-/*===Modal===
+
+/*===Modal=== */
 
 .modal-overlay {
     background: rgba(0, 0, 0, 0.60);
     width: 100%;
     height: 100%;
-    position: fixed;
     top: 0px;
     opacity: 1;
     overflow: auto;
@@ -785,16 +788,15 @@ a.btn_more:hover{
     -webkit-transition: opacity 700ms ease-in;
     -moz-transition: opacity 700ms ease-in;
     transition: opacity 700ms ease-in;
-    
+  
   }
   
-  
-  
   .modal {
+   
     background-color: rgba(0,0,0,.9);
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
     -webkit-transition: opacity 700ms ease-in;
     -moz-transition: opacity 700ms ease-in;
     transition: opacity 700ms ease-in;
@@ -814,11 +816,12 @@ a.btn_more:hover{
     z-index: 3;
   }
   
-  /*===Modal.Active===
+  /*===Modal.Active===*/
   .modal-overlay.ativar {
     opacity: 1;
     visibility: visible;
     z-index: 3;
+   
   }
 
   .modal-overlay.desativar{
@@ -857,7 +860,7 @@ a.btn_more:hover{
       margin-left: 0 25px;
   }
 
-  */
+ 
   /*DROPDONW*/
 
   
@@ -1059,13 +1062,13 @@ a.btn_more:hover{
     align-items:center;
     z-index: 1;
     color: #ffffff;
-   margin-top: -23%;
+   margin-top: -30%;
 }
 .rede-icone-slides ul{
     flex-direction: column;
     display: flex;
     z-index: 1; 
-    position: fixed;
+    position: absolute;
 }
 
 .rede-icone-slides li a i {
@@ -1073,22 +1076,21 @@ a.btn_more:hover{
 }
 
 .icon-instagram{
-    margin-right:2px;
-    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);border-radius: 30px;
+    font-size: 40px;
     
    }
 
    .icon-facebook{
-    color: #3b5998; 
+    
     font-size: 40px;
    }
    .icon-spotify{
-    color:#1DB954; 
+  
     font-size: 40px;
    }
 
    .icon-youtube{
-    color: #bb0000;
+   
     font-size: 40px;
    }
 
@@ -1108,16 +1110,13 @@ a.btn_more:hover{
   .zoom-effect-container {
     float: left;
     position: relative;
-    width: 1700px;
-    height:500px;
     margin: 0 auto;
     overflow: hidden;
 }
 
 .image-card img{
-    width: 1700px;
-    height:500px;
-    padding: 2px;
+    width: 100%;
+    height:auto;
 }
 .image-card img {
   -webkit-transition: 0.4s ease;
@@ -1129,38 +1128,48 @@ a.btn_more:hover{
   transform: scale(1.08);
 }
 
+.camada-imagem-melhores-destinos:after{
+    content:"";
+    background: rgba(0, 0, 0, 0.45);
+    width:100%;
+    min-height: 100vh;
+    position:absolute;
+    left:0;
+    top:0;
+}
 
 /*info destino img*/
 
 .info-img-destino{
-    margin-top: 5%;
-    position:absolute;
-   color: #ffffff;
-    display: flex;
-  padding: 40px;
-    flex-direction: column;
-    z-index: 2;
-    
+margin-top: 5%;
+position:absolute;
+color: #ffffff;
+display: flex;
+padding: 40px;
+flex-direction: column;
+z-index: 1;
+
 }
 .info-img-destino h3{
-    text-align: center;
-    width: 90px;
-    background: #565861;
-    border-radius: 7px;
+text-align: center;
+width: 90px;
+background: #565861;
+border-radius: 7px;
 }
 .info-img-destino h3, h2{
-    font-size: 1.4em;
-   
+font-size: 1.4em;
+
 }
 .icone-fav, .icone-seta{
-    padding: 30px 0;
+padding: 30px 0;
 }
 .icone-fav:hover{
-    color: #C0513E;
+color: #C0513E;
 }
 .icone-seta:hover{
-    color: #3E528D;
+color: #3E528D;
 }
+
 /*ANIMAÇÃO IMAGENS*/
 
 [data-anime] {

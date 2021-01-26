@@ -7,14 +7,7 @@
 
      /*redes sociais fixo*/
 
-     .rede-icone-slides{
-        display: flex;
-        justify-content: flex-start;
-        align-items:center;
-        z-index: 1;
-        color: #ffffff;
-       margin-top: -20%;
-    }
+    
 
    .icon-instagram{
     margin-left:0;
@@ -187,7 +180,7 @@
     /*AREA CURIOSIDADES ICONES INDEX*/
     .bg-curiosidades-ma {
         padding: 20px 5px;
-        margin-top: 20%;
+        margin-top: 35%;
     }
     .curiosidade-ma {
         margin: 0 auto;
@@ -426,7 +419,7 @@
     /*SLIDER PRINCIPAL*/
     .banner-slides img {
         width: 100%;
-        height: 500px;
+        height: 400px;
     }
     /*SLIDES ROTEIROS - SEGEMENTO TURISTICO - O QUE VOCÊ PROCURA?*/
     .titulo-slides {
@@ -624,44 +617,41 @@
 
     .rede-icone-slides{
         display: flex;
-        justify-content: flex-start;
+        justify-content: flex-end;
         align-items:center;
         z-index: 1;
         color: #ffffff;
-       margin-top: -20%;
+       margin-top: -35%;
     }
-
-   .icon-instagram{
-    margin-left:0;
-    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);border-radius: 30px;
-    
-   }
-
-   .icon-facebook{
-
-    color: #3b5998; 
-    font-size: 33px;
-   }
-   .icon-spotify{
-    color:#1DB954; 
-    font-size: 33px;
-   }
-
-   .icon-youtube{
-    color: #bb0000;
-    font-size: 33px;
-   }
     .rede-icone-slides ul{
-        flex-direction: row;
+        flex-direction: column;
         display: flex;
         z-index: 1; 
         position: absolute;
     }
     
     .rede-icone-slides li a i {
-        padding: 2px;
+        padding: 5px;
     }
-
+    
+    .icon-instagram{
+        font-size: 30px;
+        
+       }
+    
+       .icon-facebook{
+        
+        font-size: 30px;
+       }
+       .icon-spotify{
+      
+        font-size: 30px;
+       }
+    
+       .icon-youtube{
+       
+        font-size: 30px;
+       }
     /*imagens destinos procurados index*/
     .bg-galeria-fotos-destino{
         margin-top: 2%;
@@ -688,7 +678,7 @@
     .image-card img{
         width: 100%;
         height:400px;
-        padding: 2px;
+        
     }
     .image-card img {
       -webkit-transition: 0.4s ease;
@@ -711,7 +701,7 @@
     display: flex;
   padding: 30px;
     flex-direction: column;
-    z-index: 0;
+    z-index: 1;
     
 }
 .info-img-destino h3{
